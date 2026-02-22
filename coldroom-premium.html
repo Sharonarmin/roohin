@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ArcticCore — Cold Room Installation UAE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════
+   FOUNDATION
+═══════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Core palette */
+  --ink:       #080c14;
+  --ink-80:    #0d1421;
+  --ink-60:    #111c2e;
+  --ink-40:    #1a2a42;
+  --slate:     #2a3f5f;
+  --mist:      #8fa3be;
+  --cloud:     #c8d6e8;
+  --white:     #f4f8fc;
+  --pure:      #ffffff;
+  --ice:       #e8f2fb;
+
+  /* Accent */
+  --frost:     #0ea5e9;   /* bright sky blue */
+  --frost-dim: #0369a1;
+  --cryo:      #06b6d4;   /* cyan-teal */
+  --signal:    #22d3a0;   /* green-teal for trust */
+  --signal-dk: #059669;
+
+  /* Type */
+  --f-display: 'Cabinet Grotesk', sans-serif;
+  --f-body:    'Figtree', sans-serif;
+
+  /* Radii */
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 20px;
+  --r-xl: 32px;
+
+  /* Shadows */
+  --s-glow: 0 0 40px rgba(14,165,233,0.12);
+  --s-card: 0 1px 2px rgba(0,0,0,0.04), 0 8px 32px rgba(8,12,20,0.08);
+  --s-float: 0 24px 64px rgba(8,12,20,0.18);
+  --s-deep: 0 40px 100px rgba(8,12,20,0.28);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--f-body);
+  background: var(--pure);
+  color: var(--ink);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ═══════════════════════════════════════════
+   NAV — ULTRA MINIMAL
+═══════════════════════════════════════════ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  padding: 0 48px;
+  height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(8,12,20,0.82);
+  backdrop-filter: blur(20px) saturate(1.4);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.3s;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none;
+}
+.nav-logo-mark {
+  width: 30px; height: 30px;
+  background: linear-gradient(135deg, var(--frost), var(--cryo));
+  border-radius: 7px;
+  display: grid; place-items: center;
+  position: relative;
+  box-shadow: 0 0 16px rgba(14,165,233,0.4);
+}
+.nav-logo-mark svg { width: 15px; height: 15px; color: white; }
+.nav-wordmark {
+  font-family: var(--f-display);
+  font-weight: 800; font-size: 1.05rem; letter-spacing: -0.3px;
+  color: var(--pure);
+}
+.nav-wordmark em { font-style: normal; color: var(--frost); }
+.nav-links {
+  display: flex; align-items: center; gap: 36px; list-style: none;
+}
+.nav-links a {
+  font-size: 0.875rem; font-weight: 500;
+  color: rgba(255,255,255,0.55); text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--pure); }
+.nav-right { display: flex; align-items: center; gap: 14px; }
+.nav-tel {
+  font-size: 0.82rem; color: rgba(255,255,255,0.45);
+  text-decoration: none; letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+.nav-tel:hover { color: var(--signal); }
+.nav-btn {
+  background: var(--frost);
+  color: var(--ink); font-family: var(--f-display);
+  font-weight: 700; font-size: 0.825rem;
+  padding: 8px 20px; border-radius: var(--r-sm);
+  text-decoration: none; letter-spacing: 0.01em;
+  transition: all 0.2s;
+  box-shadow: 0 2px 12px rgba(14,165,233,0.35);
+}
+.nav-btn:hover { background: var(--cryo); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(14,165,233,0.5); }
+
+/* ═══════════════════════════════════════════
+   HERO — ASYMMETRIC CINEMATIC
+═══════════════════════════════════════════ */
+.hero {
+  min-height: 100vh;
+  background: var(--ink);
+  position: relative;
+  overflow: hidden;
+  display: flex; align-items: stretch;
+  padding-top: 64px;
+}
+
+/* Abstract BG geometry */
+.hero-bg {
+  position: absolute; inset: 0; pointer-events: none;
+}
+.hero-bg-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(14,165,233,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14,165,233,0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 80% 80% at 60% 50%, black 0%, transparent 70%);
+}
+.hero-bg-glow1 {
+  position: absolute; top: -20%; right: 10%;
+  width: 700px; height: 700px;
+  background: radial-gradient(ellipse, rgba(14,165,233,0.08) 0%, transparent 65%);
+  border-radius: 50%;
+}
+.hero-bg-glow2 {
+  position: absolute; bottom: -10%; left: 30%;
+  width: 500px; height: 400px;
+  background: radial-gradient(ellipse, rgba(6,182,212,0.05) 0%, transparent 65%);
+}
+.hero-bg-ring {
+  position: absolute; top: 50%; right: 5%;
+  transform: translateY(-50%);
+  width: 640px; height: 640px;
+  border: 1px solid rgba(14,165,233,0.06);
+  border-radius: 50%;
+}
+.hero-bg-ring::before {
+  content: ''; position: absolute; inset: 40px;
+  border: 1px solid rgba(14,165,233,0.04);
+  border-radius: 50%;
+}
+
+/* diagonal slice */
+.hero-slice {
+  position: absolute; top: 0; right: 0; bottom: 0;
+  width: 48%;
+  clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
+  overflow: hidden;
+}
+.hero-slice::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(8,12,20,0.7) 0%, rgba(8,12,20,0.25) 60%, transparent 100%);
+  z-index: 1;
+}
+.hero-slice img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  filter: brightness(0.6) saturate(0.9) contrast(1.05);
+}
+
+/* Hero content */
+.hero-content {
+  position: relative; z-index: 10;
+  display: flex; align-items: center;
+  max-width: 1320px; margin: 0 auto;
+  padding: 80px 64px 80px;
+  width: 100%;
+  min-height: calc(100vh - 64px);
+}
+.hero-left { max-width: 600px; }
+
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  margin-bottom: 32px;
+}
+.hero-eyebrow-line {
+  width: 28px; height: 1px; background: var(--frost);
+}
+.hero-eyebrow-text {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--frost);
+}
+
+.hero-h1 {
+  font-family: var(--f-display);
+  font-weight: 900;
+  font-size: clamp(3rem, 5.5vw, 5.2rem);
+  line-height: 0.96;
+  letter-spacing: -2.5px;
+  color: var(--pure);
+  margin-bottom: 28px;
+}
+.hero-h1 .line-accent { color: transparent; -webkit-text-stroke: 1.5px rgba(14,165,233,0.7); }
+.hero-h1 .line-frost { color: var(--frost); }
+
+.hero-sub {
+  font-size: 1.05rem; font-weight: 300; line-height: 1.75;
+  color: rgba(255,255,255,0.5);
+  max-width: 420px; margin-bottom: 44px;
+  letter-spacing: 0.01em;
+}
+
+.hero-ctas {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 52px;
+}
+.cta-primary {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--frost); color: var(--ink);
+  font-family: var(--f-display); font-weight: 700; font-size: 0.9rem;
+  padding: 14px 28px; border-radius: var(--r-md);
+  text-decoration: none; letter-spacing: -0.01em;
+  transition: all 0.25s;
+  box-shadow: 0 4px 24px rgba(14,165,233,0.4), 0 1px 2px rgba(0,0,0,0.2);
+  white-space: nowrap;
+}
+.cta-primary:hover { background: var(--cryo); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(14,165,233,0.55); }
+.cta-primary svg { width: 16px; height: 16px; flex-shrink: 0; }
+.cta-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: rgba(255,255,255,0.7);
+  font-family: var(--f-display); font-weight: 600; font-size: 0.875rem;
+  padding: 14px 24px; border-radius: var(--r-md);
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: all 0.25s; white-space: nowrap;
+}
+.cta-ghost:hover { border-color: rgba(255,255,255,0.4); color: white; background: rgba(255,255,255,0.04); }
+.cta-ghost svg { width: 16px; height: 16px; }
+
+/* Trust pills */
+.hero-trust {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+}
+.trust-pill {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 50px; padding: 7px 14px;
+  font-size: 0.78rem; font-weight: 500;
+  color: rgba(255,255,255,0.55); letter-spacing: 0.01em;
+}
+.trust-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--signal); flex-shrink: 0; }
+.trust-pill:nth-child(2) .trust-dot { background: var(--frost); }
+.trust-pill:nth-child(3) .trust-dot { background: var(--cryo); }
+
+/* Floating stat cards */
+.hero-floats {
+  position: absolute; right: 3%; bottom: 12%; z-index: 20;
+  display: flex; flex-direction: column; gap: 12px;
+  pointer-events: none;
+}
+.float-card {
+  background: rgba(13,20,33,0.88);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: var(--r-md);
+  padding: 16px 20px;
+  box-shadow: var(--s-float);
+  min-width: 200px;
+}
+.float-label {
+  font-size: 0.68rem; letter-spacing: 1.5px; text-transform: uppercase;
+  color: rgba(255,255,255,0.35); margin-bottom: 6px;
+}
+.float-value {
+  font-family: var(--f-display); font-weight: 800; font-size: 1.5rem;
+  color: var(--pure); letter-spacing: -0.5px; line-height: 1;
+}
+.float-value span { color: var(--signal); }
+.float-sub { font-size: 0.72rem; color: rgba(255,255,255,0.35); margin-top: 4px; }
+.float-status {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 0.78rem; color: rgba(255,255,255,0.6);
+}
+.status-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--signal);
+  box-shadow: 0 0 8px rgba(34,211,160,0.6);
+  animation: pulse 2.5s infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.75)} }
+
+/* Scroll cue */
+.hero-scroll {
+  position: absolute; bottom: 36px; left: 64px; z-index: 20;
+  display: flex; align-items: center; gap: 12px;
+  font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+}
+.scroll-line {
+  width: 40px; height: 1px; background: rgba(255,255,255,0.15);
+  position: relative; overflow: hidden;
+}
+.scroll-line::after {
+  content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+  background: var(--frost);
+  animation: scanline 2s ease-in-out infinite;
+}
+@keyframes scanline { 0%{left:-100%} 100%{left:100%} }
+
+/* ═══════════════════════════════════════════
+   BAND — MARQUEE STRIP
+═══════════════════════════════════════════ */
+.band {
+  background: var(--frost); padding: 14px 0;
+  overflow: hidden; white-space: nowrap;
+}
+.band-track {
+  display: inline-flex; gap: 0;
+  animation: marquee 22s linear infinite;
+}
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+.band-item {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--f-display); font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--ink); padding: 0 40px;
+}
+.band-sep { width: 4px; height: 4px; background: var(--ink-60); border-radius: 50%; opacity: 0.4; }
+
+/* ═══════════════════════════════════════════
+   SHARED LAYOUT
+═══════════════════════════════════════════ */
+.container { max-width: 1280px; margin: 0 auto; padding: 0 64px; }
+.section { padding: 120px 0; }
+.section-sm { padding: 80px 0; }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  margin-bottom: 20px;
+}
+.eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--frost); }
+.eyebrow-text {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--frost);
+}
+
+.display-heading {
+  font-family: var(--f-display);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+  color: var(--ink);
+}
+
+/* ═══════════════════════════════════════════
+   SERVICES — EDITORIAL MIXED LAYOUT
+═══════════════════════════════════════════ */
+.services-section {
+  background: var(--white);
+  overflow: hidden;
+}
+.services-header {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 60px; align-items: end;
+  margin-bottom: 80px;
+}
+.services-header-left {}
+.services-h2 {
+  font-family: var(--f-display);
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  font-weight: 900; letter-spacing: -1.5px; line-height: 1.05;
+  color: var(--ink); margin-bottom: 0;
+}
+.services-h2 span { color: var(--frost); }
+.services-header-right {
+  padding-bottom: 4px;
+}
+.services-header-right p {
+  font-size: 1rem; color: #5a7080; line-height: 1.75; font-weight: 300;
+  border-left: 2px solid var(--frost);
+  padding-left: 20px;
+}
+
+/* Featured row — big block */
+.services-featured {
+  display: grid; grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 2px;
+  margin-bottom: 2px;
+  background: var(--ice);
+  border-radius: var(--r-xl) var(--r-xl) 0 0;
+  overflow: hidden;
+}
+/* Secondary row */
+.services-secondary {
+  display: grid; grid-template-columns: 1fr 1fr 1.4fr;
+  gap: 2px;
+  background: var(--ice);
+  border-radius: 0 0 var(--r-xl) var(--r-xl);
+  overflow: hidden;
+}
+
+.svc-block {
+  background: var(--pure);
+  padding: 44px 40px;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  transition: background 0.3s;
+}
+.svc-block::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(14,165,233,0) 0%, rgba(14,165,233,0.04) 100%);
+  opacity: 0; transition: opacity 0.3s;
+}
+.svc-block:hover { background: #f6fbff; }
+.svc-block:hover::before { opacity: 1; }
+
+.svc-block.large { padding: 56px 52px; }
+
+/* animated border-bottom on hover */
+.svc-block::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--frost), var(--cryo));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.svc-block:hover::after { transform: scaleX(1); }
+
+.svc-number {
+  font-family: var(--f-display); font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 2px; color: var(--mist);
+  margin-bottom: 28px; display: block;
+}
+.svc-icon {
+  width: 44px; height: 44px;
+  background: var(--ice);
+  border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+  transition: background 0.3s;
+}
+.svc-block:hover .svc-icon { background: rgba(14,165,233,0.1); }
+.svc-icon svg { width: 22px; height: 22px; color: var(--frost-dim); transition: color 0.3s; }
+.svc-block:hover .svc-icon svg { color: var(--frost); }
+
+.svc-h3 {
+  font-family: var(--f-display);
+  font-weight: 800; font-size: 1.15rem; letter-spacing: -0.4px;
+  color: var(--ink); margin-bottom: 10px; line-height: 1.2;
+}
+.svc-block.large .svc-h3 { font-size: 1.45rem; }
+.svc-p {
+  font-size: 0.875rem; color: #6a7e90; line-height: 1.7; font-weight: 400;
+  margin-bottom: 20px;
+}
+.svc-checks {
+  display: flex; flex-direction: column; gap: 6px;
+}
+.svc-check {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.8rem; color: #7a8ea0; font-weight: 500;
+}
+.svc-check-icon { color: var(--signal); flex-shrink: 0; }
+.svc-check-icon svg { width: 13px; height: 13px; }
+
+/* ═══════════════════════════════════════════
+   WHY CHOOSE US — GLASSMORPHISM CARDS
+═══════════════════════════════════════════ */
+.why-section {
+  background: linear-gradient(170deg, var(--ink) 0%, var(--ink-60) 40%, #102040 100%);
+  position: relative; overflow: hidden;
+}
+.why-section::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 20% 100%, rgba(14,165,233,0.07) 0%, transparent 60%),
+              radial-gradient(ellipse 50% 70% at 80% 0%, rgba(6,182,212,0.05) 0%, transparent 60%);
+}
+.why-section .container { position: relative; z-index: 1; }
+.why-header {
+  display: flex; align-items: end; justify-content: space-between;
+  margin-bottom: 72px; gap: 40px;
+}
+.why-h2 {
+  font-family: var(--f-display);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 900; letter-spacing: -1.5px; line-height: 1.05;
+  color: var(--pure);
+}
+.why-h2 em { font-style: normal; color: transparent; -webkit-text-stroke: 1px rgba(14,165,233,0.6); }
+.why-header-note {
+  font-size: 0.9rem; color: rgba(255,255,255,0.35); max-width: 280px;
+  line-height: 1.7; text-align: right; font-weight: 300;
+}
+
+.why-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 16px;
+}
+.why-card {
+  background: rgba(255,255,255,0.035);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--r-lg);
+  padding: 40px 32px;
+  position: relative; overflow: hidden;
+  transition: all 0.35s;
+}
+.why-card::before {
+  content: ''; position: absolute;
+  top: -60px; right: -60px;
+  width: 160px; height: 160px;
+  background: radial-gradient(circle, rgba(14,165,233,0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  transition: all 0.35s;
+}
+.why-card:hover { background: rgba(255,255,255,0.055); border-color: rgba(14,165,233,0.2); transform: translateY(-4px); }
+.why-card:hover::before { opacity: 2; transform: scale(1.4); }
+
+.why-icon {
+  width: 52px; height: 52px; border-radius: var(--r-md);
+  background: linear-gradient(135deg, rgba(14,165,233,0.2), rgba(6,182,212,0.1));
+  border: 1px solid rgba(14,165,233,0.2);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 28px;
+  box-shadow: 0 0 24px rgba(14,165,233,0.1);
+}
+.why-icon svg { width: 24px; height: 24px; color: var(--frost); }
+.why-h3 {
+  font-family: var(--f-display); font-size: 1.05rem; font-weight: 800;
+  color: var(--pure); letter-spacing: -0.2px; margin-bottom: 12px;
+}
+.why-p { font-size: 0.865rem; color: rgba(255,255,255,0.4); line-height: 1.7; font-weight: 300; }
+.why-tag {
+  display: inline-block; margin-top: 24px;
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--signal); background: rgba(34,211,160,0.08);
+  border: 1px solid rgba(34,211,160,0.15);
+  padding: 5px 12px; border-radius: 50px;
+}
+
+/* ═══════════════════════════════════════════
+   INDUSTRIES — ASYMMETRIC BENTO
+═══════════════════════════════════════════ */
+.ind-section {
+  background: var(--white); overflow: hidden;
+}
+.ind-header { margin-bottom: 64px; }
+.ind-h2 {
+  font-family: var(--f-display);
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  font-weight: 900; letter-spacing: -1.5px; line-height: 1.05;
+  color: var(--ink); max-width: 500px;
+}
+
+.ind-bento {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 12px;
+}
+.ind-cell {
+  background: var(--ice);
+  border-radius: var(--r-lg);
+  padding: 36px 32px;
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s;
+  cursor: default; min-height: 160px;
+  position: relative; overflow: hidden;
+}
+.ind-cell::after {
+  content: ''; position: absolute;
+  bottom: -40px; right: -40px;
+  width: 100px; height: 100px;
+  border: 1px solid rgba(14,165,233,0.08);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.ind-cell:hover { background: #e8f4fd; transform: translateY(-2px); box-shadow: var(--s-card); }
+.ind-cell:hover::after { transform: scale(2); opacity: 0; }
+
+.ind-cell.wide { grid-column: span 1; grid-row: span 2; min-height: 340px; }
+.ind-cell.dark {
+  background: var(--ink);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.ind-cell.dark:hover { background: var(--ink-60); }
+.ind-cell.dark .ind-name { color: var(--pure); }
+.ind-cell.dark .ind-desc { color: rgba(255,255,255,0.35); }
+
+.ind-icon {
+  width: 44px; height: 44px;
+  background: rgba(14,165,233,0.1);
+  border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+}
+.ind-cell.dark .ind-icon { background: rgba(14,165,233,0.12); }
+.ind-icon svg { width: 20px; height: 20px; color: var(--frost); }
+.ind-name {
+  font-family: var(--f-display); font-weight: 800; font-size: 1.05rem;
+  color: var(--ink); letter-spacing: -0.2px; line-height: 1.25;
+}
+.ind-cell.wide .ind-name { font-size: 1.3rem; }
+.ind-desc { font-size: 0.82rem; color: #7a8ea0; margin-top: 8px; line-height: 1.65; }
+
+/* ═══════════════════════════════════════════
+   PROCESS — CONNECTED NODES
+═══════════════════════════════════════════ */
+.process-section {
+  background: var(--white); position: relative;
+}
+.process-header { margin-bottom: 80px; text-align: center; }
+.process-h2 {
+  font-family: var(--f-display);
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  font-weight: 900; letter-spacing: -1.5px;
+  color: var(--ink); margin-bottom: 16px;
+}
+.process-sub { font-size: 1rem; color: #7a8ea0; font-weight: 300; max-width: 380px; margin: 0 auto; line-height: 1.7; }
+
+.process-track {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  position: relative;
+  gap: 0;
+}
+.process-connector {
+  position: absolute; top: 36px; left: calc(12.5% + 20px); right: calc(12.5% + 20px);
+  height: 1px; background: var(--ice); z-index: 0;
+}
+.process-connector-fill {
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, var(--frost), var(--cryo), var(--signal));
+  transform-origin: left;
+  animation: fillLine 2.5s ease 0.5s both;
+}
+@keyframes fillLine { from{transform:scaleX(0)} to{transform:scaleX(1)} }
+
+.process-step { text-align: center; padding: 0 24px; position: relative; z-index: 1; }
+.step-node {
+  width: 72px; height: 72px; margin: 0 auto 28px;
+  background: var(--pure);
+  border: 2px solid var(--ice);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  transition: all 0.3s;
+  box-shadow: var(--s-card);
+}
+.step-node::before {
+  content: attr(data-n);
+  position: absolute; top: -8px; right: -8px;
+  width: 22px; height: 22px;
+  background: var(--frost);
+  border-radius: 50%; border: 2px solid var(--pure);
+  font-family: var(--f-display); font-size: 0.65rem; font-weight: 800;
+  color: var(--ink); display: flex; align-items: center; justify-content: center;
+  line-height: 1;
+}
+.process-step:hover .step-node {
+  border-color: var(--frost); background: rgba(14,165,233,0.04);
+  box-shadow: 0 0 0 6px rgba(14,165,233,0.06);
+}
+.step-node svg { width: 26px; height: 26px; color: var(--ink-40); transition: color 0.3s; }
+.process-step:hover .step-node svg { color: var(--frost); }
+.step-h3 {
+  font-family: var(--f-display); font-size: 1rem; font-weight: 800;
+  color: var(--ink); margin-bottom: 10px; letter-spacing: -0.2px;
+}
+.step-p { font-size: 0.845rem; color: #7a8ea0; line-height: 1.65; font-weight: 300; }
+.step-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 16px; font-size: 0.7rem; color: var(--frost);
+  font-weight: 600; letter-spacing: 0.5px;
+}
+.step-tag svg { width: 12px; height: 12px; }
+
+/* ═══════════════════════════════════════════
+   STATS INTERLUDE
+═══════════════════════════════════════════ */
+.stats-section {
+  background: var(--ink);
+  padding: 72px 0;
+  position: relative; overflow: hidden;
+}
+.stats-section::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(14,165,233,0.05) 0%, transparent 70%);
+}
+.stats-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0; position: relative; z-index: 1;
+}
+.stat-item {
+  text-align: center; padding: 40px 20px;
+  border-right: 1px solid rgba(255,255,255,0.06);
+}
+.stat-item:last-child { border-right: none; }
+.stat-n {
+  font-family: var(--f-display); font-size: 3.5rem; font-weight: 900;
+  letter-spacing: -2px; line-height: 1;
+  color: var(--pure);
+}
+.stat-n sup { font-size: 1.5rem; color: var(--frost); vertical-align: super; letter-spacing: 0; }
+.stat-n sub { font-size: 1rem; color: var(--signal); vertical-align: baseline; letter-spacing: 0; }
+.stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.3); margin-top: 8px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500; }
+
+/* ═══════════════════════════════════════════
+   CTA — POWER SECTION
+═══════════════════════════════════════════ */
+.cta-section {
+  background: var(--ink);
+  padding: 0;
+  position: relative; overflow: hidden;
+}
+.cta-inner-wrap {
+  margin: 0 48px 80px;
+  background: linear-gradient(135deg, #0c1f3c 0%, #0d2a50 40%, #0a3060 70%, #0d2040 100%);
+  border-radius: 32px;
+  padding: 100px 80px;
+  position: relative; overflow: hidden;
+  border: 1px solid rgba(14,165,233,0.12);
+}
+.cta-inner-wrap::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(14,165,233,0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(14,165,233,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.cta-glow {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 600px; height: 300px;
+  background: radial-gradient(ellipse, rgba(14,165,233,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.cta-content {
+  position: relative; z-index: 1;
+  text-align: center;
+}
+.cta-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(34,211,160,0.08);
+  border: 1px solid rgba(34,211,160,0.2);
+  border-radius: 50px; padding: 7px 18px;
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--signal); margin-bottom: 32px;
+}
+.cta-badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--signal); }
+.cta-h2 {
+  font-family: var(--f-display);
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  font-weight: 900; letter-spacing: -2px; line-height: 1.0;
+  color: var(--pure); margin-bottom: 20px;
+}
+.cta-h2 em { font-style: normal; color: var(--frost); }
+.cta-sub {
+  font-size: 1rem; color: rgba(255,255,255,0.45); margin-bottom: 48px;
+  font-weight: 300; line-height: 1.7; max-width: 420px; margin-left: auto; margin-right: auto;
+}
+.cta-btns-row {
+  display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap;
+}
+.cta-btn-main {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--frost); color: var(--ink);
+  font-family: var(--f-display); font-weight: 700; font-size: 0.95rem;
+  padding: 16px 32px; border-radius: var(--r-md); text-decoration: none;
+  letter-spacing: -0.02em;
+  box-shadow: 0 4px 28px rgba(14,165,233,0.45);
+  transition: all 0.25s; white-space: nowrap;
+}
+.cta-btn-main:hover { background: var(--cryo); transform: translateY(-2px); box-shadow: 0 8px 36px rgba(14,165,233,0.6); }
+.cta-btn-main svg { width: 17px; height: 17px; }
+.cta-btn-wa {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: #1fbd57; color: white;
+  font-family: var(--f-display); font-weight: 700; font-size: 0.95rem;
+  padding: 16px 32px; border-radius: var(--r-md); text-decoration: none;
+  box-shadow: 0 4px 24px rgba(31,189,87,0.3);
+  transition: all 0.25s; white-space: nowrap; letter-spacing: -0.02em;
+}
+.cta-btn-wa:hover { background: #18a04b; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(31,189,87,0.5); }
+.cta-btn-wa svg { width: 18px; height: 18px; }
+.cta-btn-outline {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: transparent; color: rgba(255,255,255,0.6);
+  font-family: var(--f-display); font-weight: 600; font-size: 0.9rem;
+  padding: 16px 28px; border-radius: var(--r-md); text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.14);
+  transition: all 0.25s; white-space: nowrap;
+}
+.cta-btn-outline:hover { border-color: rgba(255,255,255,0.35); color: white; }
+.cta-btn-outline svg { width: 16px; height: 16px; }
+
+/* ═══════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════ */
+footer {
+  background: #04080f;
+  padding: 64px 0 0;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 2.2fr 1fr 1fr 1.4fr;
+  gap: 64px; padding-bottom: 56px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 28px;
+}
+.footer-brand {}
+.footer-logo-wrap {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; margin-bottom: 18px;
+}
+.footer-logo-mark {
+  width: 28px; height: 28px;
+  background: linear-gradient(135deg, var(--frost), var(--cryo));
+  border-radius: 7px; display: grid; place-items: center;
+}
+.footer-logo-mark svg { width: 13px; height: 13px; color: white; }
+.footer-wordmark {
+  font-family: var(--f-display); font-weight: 800; font-size: 1rem;
+  color: var(--pure);
+}
+.footer-wordmark em { font-style: normal; color: var(--frost); }
+.footer-brand p {
+  font-size: 0.85rem; color: rgba(255,255,255,0.3); line-height: 1.75;
+  max-width: 260px; font-weight: 300; margin-bottom: 28px;
+}
+.footer-socials {
+  display: flex; gap: 8px;
+}
+.soc-btn {
+  width: 34px; height: 34px; border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; transition: all 0.2s;
+  color: rgba(255,255,255,0.4);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.soc-btn:hover { background: rgba(14,165,233,0.15); border-color: rgba(14,165,233,0.3); color: var(--frost); }
+.soc-btn svg { width: 14px; height: 14px; }
+.footer-col h5 {
+  font-family: var(--f-display); font-size: 0.78rem; font-weight: 700;
+  color: var(--pure); letter-spacing: 1.5px; text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a {
+  font-size: 0.85rem; color: rgba(255,255,255,0.35);
+  text-decoration: none; transition: color 0.2s; font-weight: 400;
+}
+.footer-links a:hover { color: var(--frost); }
+.footer-contact-row {
+  display: flex; gap: 10px; margin-bottom: 14px; align-items: flex-start;
+}
+.footer-contact-row svg { width: 14px; height: 14px; color: var(--frost); flex-shrink: 0; margin-top: 3px; opacity: 0.7; }
+.footer-contact-row span {
+  font-size: 0.83rem; color: rgba(255,255,255,0.35); line-height: 1.55; font-weight: 300;
+}
+.footer-contact-row a { color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.2s; }
+.footer-contact-row a:hover { color: var(--frost); }
+
+.footer-bottom {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-bottom: 32px; gap: 16px; flex-wrap: wrap;
+}
+.footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.2); font-weight: 300; }
+.footer-copy a { color: rgba(255,255,255,0.2); text-decoration: none; transition: color 0.2s; }
+.footer-copy a:hover { color: rgba(255,255,255,0.45); }
+.footer-legal {
+  display: flex; gap: 20px;
+}
+.footer-legal a { font-size: 0.78rem; color: rgba(255,255,255,0.2); text-decoration: none; transition: color 0.2s; }
+.footer-legal a:hover { color: rgba(255,255,255,0.45); }
+
+/* ═══════════════════════════════════════════
+   SCROLL REVEAL
+═══════════════════════════════════════════ */
+.reveal {
+  opacity: 0; transform: translateY(32px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .hero-floats { display: none; }
+  .services-featured, .services-secondary { grid-template-columns: 1fr 1fr; }
+  .why-grid { grid-template-columns: 1fr 1fr; }
+  .ind-bento { grid-template-columns: 1fr 1fr; }
+  .ind-cell.wide { grid-column: 1; grid-row: 1; min-height: 200px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .stats-grid { grid-template-columns: repeat(2,1fr); }
+  .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .stat-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.06); }
+  .stat-item:nth-last-child(-n+2) { border-bottom: none; }
+}
+@media (max-width: 768px) {
+  .container { padding: 0 24px; }
+  .nav { padding: 0 24px; }
+  .nav .nav-links { display: none; }
+  .hero-content { padding: 48px 24px; min-height: calc(100vh - 64px); }
+  .hero-slice { display: none; }
+  .hero-h1 { font-size: 2.6rem; letter-spacing: -1.5px; }
+  .services-header { grid-template-columns: 1fr; gap: 24px; }
+  .services-featured, .services-secondary { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .ind-bento { grid-template-columns: 1fr 1fr; }
+  .process-track { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .process-connector { display: none; }
+  .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+  .cta-inner-wrap { margin: 0 16px 60px; padding: 60px 32px; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════ NAV ═══════ -->
+<nav class="nav">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg>
+    </div>
+    <span class="nav-wordmark">Arctic<em>Core</em> UAE</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#industries">Industries</a></li>
+    <li><a href="#process">Process</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:+971000000000" class="nav-tel">+971 00 000 0000</a>
+    <a href="#cta" class="nav-btn">Get a Quote</a>
+  </div>
+</nav>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-bg-glow1"></div>
+    <div class="hero-bg-glow2"></div>
+    <div class="hero-bg-ring"></div>
+  </div>
+
+  <!-- Diagonal image slice -->
+  <div class="hero-slice">
+    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=90&fit=crop" alt="Cold Room Interior">
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-line"></div>
+        <span class="hero-eyebrow-text">UAE Cold Room Specialists</span>
+      </div>
+
+      <h1 class="hero-h1">
+        Cold Room<br>
+        <span class="line-frost">Installation</span><br>
+        <span class="line-accent">in UAE</span>
+      </h1>
+
+      <p class="hero-sub">End-to-end cold room solutions for commercial, industrial, and hospitality businesses. Precision-engineered. UAE-compliant.</p>
+
+      <div class="hero-ctas">
+        <a href="#cta" class="cta-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          Request Free Quote
+        </a>
+        <a href="tel:+971000000000" class="cta-ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.48 2 2 0 0 1 3.55 1.28h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.88-.88a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Now
+        </a>
+      </div>
+
+      <div class="hero-trust">
+        <div class="trust-pill"><div class="trust-dot"></div>UAE Food Safety Certified</div>
+        <div class="trust-pill"><div class="trust-dot"></div>Fast Installation</div>
+        <div class="trust-pill"><div class="trust-dot"></div>Energy A+ Rated</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating cards -->
+  <div class="hero-floats">
+    <div class="float-card">
+      <div class="float-label">Active Status</div>
+      <div class="float-status">
+        <div class="status-dot"></div>
+        System Operating — −18°C
+      </div>
+    </div>
+    <div class="float-card">
+      <div class="float-label">Projects Delivered</div>
+      <div class="float-value">500<span>+</span></div>
+      <div class="float-sub">Across All UAE Emirates</div>
+    </div>
+    <div class="float-card">
+      <div class="float-label">Energy Efficiency</div>
+      <div class="float-value"><span>A+</span></div>
+      <div class="float-sub">Certified Refrigeration Systems</div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    Scroll
+  </div>
+</section>
+
+<!-- ═══════ MARQUEE ═══════ -->
+<div class="band">
+  <div class="band-track">
+    <div class="band-item"><span class="band-sep"></span>Walk-In Chiller Rooms</div>
+    <div class="band-item"><span class="band-sep"></span>Blast Freezers</div>
+    <div class="band-item"><span class="band-sep"></span>Cold Storage Warehouses</div>
+    <div class="band-item"><span class="band-sep"></span>Industrial Cold Rooms</div>
+    <div class="band-item"><span class="band-sep"></span>Restaurant Refrigeration</div>
+    <div class="band-item"><span class="band-sep"></span>UAE Compliant</div>
+    <div class="band-item"><span class="band-sep"></span>Dubai Municipality Approved</div>
+    <div class="band-item"><span class="band-sep"></span>Walk-In Chiller Rooms</div>
+    <div class="band-item"><span class="band-sep"></span>Blast Freezers</div>
+    <div class="band-item"><span class="band-sep"></span>Cold Storage Warehouses</div>
+    <div class="band-item"><span class="band-sep"></span>Industrial Cold Rooms</div>
+    <div class="band-item"><span class="band-sep"></span>Restaurant Refrigeration</div>
+    <div class="band-item"><span class="band-sep"></span>UAE Compliant</div>
+    <div class="band-item"><span class="band-sep"></span>Dubai Municipality Approved</div>
+  </div>
+</div>
+
+<!-- ═══════ SERVICES ═══════ -->
+<section class="services-section section" id="services">
+  <div class="container">
+    <div class="services-header reveal">
+      <div class="services-header-left">
+        <div class="eyebrow"><div class="eyebrow-dot"></div><span class="eyebrow-text">Cold Room Solutions</span></div>
+        <h2 class="services-h2">Every cold room<br>application, <span>mastered</span>.</h2>
+      </div>
+      <div class="services-header-right">
+        <p>From small commercial walk-in units to large-scale industrial refrigeration warehouses — we engineer, supply, and install precision cold room systems for every sector across UAE.</p>
+      </div>
+    </div>
+
+    <!-- Featured row: large + two normal -->
+    <div class="services-featured reveal">
+
+      <div class="svc-block large">
+        <span class="svc-number">01</span>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3 class="svc-h3">Walk-In<br>Chiller Room</h3>
+        <p class="svc-p">Precision-cooled environments for fresh produce, dairy, beverages, and perishables. Operating range 0°C to +10°C with digital controls.</p>
+        <div class="svc-checks">
+          <div class="svc-check"><span class="svc-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Custom dimensions & layout</div>
+          <div class="svc-check"><span class="svc-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>PU insulation sandwich panels</div>
+          <div class="svc-check"><span class="svc-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>IoT temperature monitoring</div>
+        </div>
+      </div>
+
+      <div class="svc-block">
+        <span class="svc-number">02</span>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 class="svc-h3">Walk-In Freezer Room</h3>
+        <p class="svc-p">Sub-zero freezer rooms for meat, seafood, and frozen goods. −18°C to −25°C with frost-resistant flooring.</p>
+        <div class="svc-checks">
+          <div class="svc-check"><span class="svc-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Anti-condensation door systems</div>
+          <div class="svc-check"><span class="svc-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Heated floor options</div>
+          <div class="svc-check"><span class="svc-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Low-GWP refrigerants</div>
+        </div>
+      </div>
+
+      <div class="svc-block">
+        <span class="svc-number">03</span>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3 class="svc-h3">Blast Freezer & Blast Chiller</h3>
+        <p class="svc-p">Rapid blast-freeze technology for commercial kitchens and food processors. From +70°C to −18°C in under 90 minutes.</p>
+        <div class="svc-checks">
+          <div class="svc-check"><span class="svc-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>HACCP-compliant cycles</div>
+          <div class="svc-check"><span class="svc-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Multi-program controller</div>
+          <div class="svc-check"><span class="svc-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Down to −40°C capacity</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Secondary row: two normal + large -->
+    <div class="services-secondary reveal reveal-delay-1">
+
+      <div class="svc-block">
+        <span class="svc-number">04</span>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3 class="svc-h3">Cold Storage Warehouse</h3>
+        <p class="svc-p">Large-scale multi-zone refrigerated warehouses for logistics and distribution with remote monitoring systems.</p>
+        <div class="svc-checks">
+          <div class="svc-check"><span class="svc-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Multi-temperature zones</div>
+          <div class="svc-check"><span class="svc-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Forklift-optimized layouts</div>
+          <div class="svc-check"><span class="svc-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>SCADA-ready controls</div>
+        </div>
+      </div>
+
+      <div class="svc-block">
+        <span class="svc-number">05</span>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h.01M7 20v-4M12 20v-8M17 20V8M22 4v16"/></svg>
+        </div>
+        <h3 class="svc-h3">Industrial Cold Rooms</h3>
+        <p class="svc-p">Heavy-duty refrigeration for food manufacturing plants, pharmaceutical storage, and industrial processing facilities.</p>
+        <div class="svc-checks">
+          <div class="svc-check"><span class="svc-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Industrial compressor arrays</div>
+          <div class="svc-check"><span class="svc-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>N+1 redundancy systems</div>
+          <div class="svc-check"><span class="svc-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>ISO & GMP compliant</div>
+        </div>
+      </div>
+
+      <div class="svc-block large">
+        <span class="svc-number">06</span>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="svc-h3">Commercial &<br>Restaurant Refrigeration</h3>
+        <p class="svc-p">Tailored refrigeration systems for F&B, hotels, and catering. Undercounters, prep stations, display chillers, bar systems — engineered for the UAE hospitality sector.</p>
+        <div class="svc-checks">
+          <div class="svc-check"><span class="svc-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Dubai Municipality approved</div>
+          <div class="svc-check"><span class="svc-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Space-efficient kitchen units</div>
+          <div class="svc-check"><span class="svc-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Rapid deployment available</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ STATS ═══════ -->
+<div class="stats-section" id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-n">500<sup>+</sup></div>
+        <div class="stat-label">Projects Delivered</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-n">15<sup>+</sup></div>
+        <div class="stat-label">Years in UAE Market</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-n">7<sub>★</sub></div>
+        <div class="stat-label">Emirates Covered</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-n">35<sup>%</sup></div>
+        <div class="stat-label">Avg. Energy Savings</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ WHY ═══════ -->
+<section class="why-section section" id="why">
+  <div class="container">
+    <div class="why-header reveal">
+      <div>
+        <div class="eyebrow"><div class="eyebrow-dot"></div><span class="eyebrow-text">Why ArcticCore</span></div>
+        <h2 class="why-h2">Built different.<br><em>Proven</em> to perform.</h2>
+      </div>
+      <p class="why-header-note">Every project is assigned a dedicated engineer. Every system is commissioned, tested, and warranted.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/></svg>
+        </div>
+        <h3 class="why-h3">Fully Customized</h3>
+        <p class="why-p">No standard sizes. Every cold room is engineered to your exact dimensions, load capacity, and temperature profile.</p>
+        <span class="why-tag">Bespoke Engineering</span>
+      </div>
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3 class="why-h3">Fast Installation</h3>
+        <p class="why-p">Most projects completed in 5–10 working days. We minimize your operational downtime with precise scheduling.</p>
+        <span class="why-tag">5–10 Day Delivery</span>
+      </div>
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3 class="why-h3">Energy Efficient</h3>
+        <p class="why-p">A+ rated systems with inverter-driven compressors reduce electricity consumption by up to 35% versus conventional refrigeration.</p>
+        <span class="why-tag">A+ Rated Systems</span>
+      </div>
+      <div class="why-card reveal reveal-delay-4">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h3 class="why-h3">UAE Food Safety Compliant</h3>
+        <p class="why-p">Full compliance with Dubai Municipality, ADAFSA, HACCP, and UAE food safety regulations. We handle all documentation.</p>
+        <span class="why-tag">HACCP + DM Certified</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ INDUSTRIES ═══════ -->
+<section class="ind-section section" id="industries">
+  <div class="container">
+    <div class="ind-header reveal">
+      <div class="eyebrow"><div class="eyebrow-dot"></div><span class="eyebrow-text">Industries We Serve</span></div>
+      <h2 class="ind-h2">Cold chain expertise across every sector.</h2>
+    </div>
+    <div class="ind-bento">
+
+      <div class="ind-cell wide dark reveal reveal-delay-1">
+        <div>
+          <div class="ind-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="ind-name">Restaurants &amp; Hotels</div>
+          <div class="ind-desc">Precision refrigeration for high-volume F&B kitchens, hotel back-of-house operations, and fine dining establishments across UAE.</div>
+        </div>
+        <div style="margin-top:20px">
+          <span style="font-size:0.7rem;color:rgba(255,255,255,0.2);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;">Most Popular Sector →</span>
+        </div>
+      </div>
+
+      <div class="ind-cell reveal reveal-delay-1">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+        <div class="ind-name">Supermarkets</div>
+        <div class="ind-desc">Display refrigeration, back-room chillers, and produce storage for retail chains.</div>
+      </div>
+
+      <div class="ind-cell reveal reveal-delay-2">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="ind-name">Food Processing</div>
+        <div class="ind-desc">Process cooling for meat, dairy, bakery, and packaged food production facilities.</div>
+      </div>
+
+      <div class="ind-cell reveal reveal-delay-2">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div class="ind-name">Logistics &amp; Warehousing</div>
+        <div class="ind-desc">Large-scale cold chain hubs, 3PL facilities, and temperature-controlled distribution centers.</div>
+      </div>
+
+      <div class="ind-cell reveal reveal-delay-3">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11m0 0H5l-2 7h18l-2-7h-4m-6 0h6"/></svg></div>
+        <div class="ind-name">Pharmaceuticals</div>
+        <div class="ind-desc">GDP-compliant pharmaceutical cold storage with validated temperature mapping and redundancy.</div>
+      </div>
+
+      <div class="ind-cell reveal reveal-delay-3">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
+        <div class="ind-name">Catering Companies</div>
+        <div class="ind-desc">Mobile and fixed cold room solutions for large-scale catering and event management operations.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PROCESS ═══════ -->
+<section class="process-section section-sm" id="process" style="background:#f8fbfe;">
+  <div class="container">
+    <div class="process-header reveal">
+      <div class="eyebrow" style="justify-content:center;"><div class="eyebrow-dot"></div><span class="eyebrow-text">How We Work</span></div>
+      <h2 class="process-h2">From first call to full operation.</h2>
+      <p class="process-sub">A clear, predictable 4-step process with zero surprises.</p>
+    </div>
+
+    <div class="process-track" style="padding-top: 0;">
+      <div class="process-connector"><div class="process-connector-fill"></div></div>
+
+      <div class="process-step reveal reveal-delay-1">
+        <div class="step-node" data-n="1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="step-h3">Consultation &amp; Site Visit</h3>
+        <p class="step-p">Our engineers visit your location to assess requirements, take measurements, and understand your operational needs. Free of charge.</p>
+        <span class="step-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          No charge
+        </span>
+      </div>
+
+      <div class="process-step reveal reveal-delay-2">
+        <div class="step-node" data-n="2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
+        </div>
+        <h3 class="step-h3">Custom Design &amp; Proposal</h3>
+        <p class="step-p">CAD-detailed layout plans, refrigeration system specification, and a transparent itemized quotation — delivered within 48 hours.</p>
+        <span class="step-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          48-hr turnaround
+        </span>
+      </div>
+
+      <div class="process-step reveal reveal-delay-3">
+        <div class="step-node" data-n="3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3 class="step-h3">Installation &amp; Commissioning</h3>
+        <p class="step-p">Certified technicians handle full panel installation, refrigeration fit-out, electrical, and rigorous performance testing before handover.</p>
+        <span class="step-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          5–10 working days
+        </span>
+      </div>
+
+      <div class="process-step reveal reveal-delay-4">
+        <div class="step-node" data-n="4">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="step-h3">Support &amp; Maintenance</h3>
+        <p class="step-p">Annual AMC contracts, 24/7 emergency support lines, remote system monitoring, and scheduled preventive maintenance.</p>
+        <span class="step-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          24/7 available
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CTA ═══════ -->
+<div class="cta-section" id="cta">
+  <div class="cta-inner-wrap">
+    <div class="cta-glow"></div>
+    <div class="cta-content">
+      <div class="cta-badge">Free Consultation — No Obligation</div>
+      <h2 class="cta-h2">Need Reliable Cold Room<br>Installation in <em>UAE</em>?</h2>
+      <p class="cta-sub">Talk to a cold room engineer today. Free site visit, custom design, and transparent quotation — across all UAE Emirates.</p>
+      <div class="cta-btns-row">
+        <a href="mailto:info@arcticcore.ae" class="cta-btn-main">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Get Free Consultation
+        </a>
+        <a href="https://wa.me/971000000000" class="cta-btn-wa" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          WhatsApp Now
+        </a>
+        <a href="tel:+971000000000" class="cta-btn-outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.48 2 2 0 0 1 3.55 1.28h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.88-.88a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Directly
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo-wrap">
+          <div class="footer-logo-mark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg>
+          </div>
+          <span class="footer-wordmark">Arctic<em>Core</em> UAE</span>
+        </a>
+        <p>UAE's precision cold room specialists. Designing, supplying, and installing refrigeration systems since 2009 — across all seven Emirates.</p>
+        <div class="footer-socials">
+          <a href="#" class="soc-btn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="soc-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="soc-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://wa.me/971000000000" class="soc-btn" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51C7.372 9.25 7.174 9.25 6.976 9.25c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413A11.815 11.815 0 0 0 12.05 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul class="footer-links">
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#cta">Get a Quote</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Solutions</h5>
+        <ul class="footer-links">
+          <li><a href="#services">Walk-In Chillers</a></li>
+          <li><a href="#services">Walk-In Freezers</a></li>
+          <li><a href="#services">Blast Freezers</a></li>
+          <li><a href="#services">Cold Warehouses</a></li>
+          <li><a href="#services">Industrial Rooms</a></li>
+          <li><a href="#services">F&B Refrigeration</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.48 2 2 0 0 1 3.55 1.28h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.88-.88a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span><a href="tel:+971000000000">+971 00 000 0000</a></span>
+        </div>
+        <div class="footer-contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span><a href="mailto:info@arcticcore.ae">info@arcticcore.ae</a></span>
+        </div>
+        <div class="footer-contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Al Quoz Industrial Area,<br>Dubai, UAE</span>
+        </div>
+        <div class="footer-contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Mon–Sat 8AM–7PM<br>24/7 Emergency Line</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 ArcticCore UAE. All rights reserved. · Built for <a href="#">UAE Cold Chain Industry</a></span>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* Scroll reveal */
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  /* Smooth scroll */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+
+  /* Nav background on scroll */
+  const nav = document.querySelector('.nav');
+  window.addEventListener('scroll', () => {
+    nav.style.background = window.scrollY > 60 
+      ? 'rgba(4,8,15,0.97)' 
+      : 'rgba(8,12,20,0.82)';
+  });
+
+  /* Parallax subtle on hero */
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    const slice = document.querySelector('.hero-slice');
+    if (slice) slice.style.transform = `translateY(${y * 0.15}px)`;
+  });
+</script>
+</body>
+</html>

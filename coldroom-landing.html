@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ArcticPro UAE – Cold Room Installation & Customized Cold Room Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --blue-deep: #0a1628;
+    --blue-mid: #0d2d54;
+    --blue-primary: #1565c0;
+    --blue-vivid: #1e88e5;
+    --blue-light: #e3f0fc;
+    --blue-pale: #f0f7ff;
+    --green: #00c875;
+    --green-dark: #00a862;
+    --white: #ffffff;
+    --grey-100: #f5f7fa;
+    --grey-200: #e9eef5;
+    --grey-400: #9aadbe;
+    --grey-600: #5a7184;
+    --grey-800: #1e2d3d;
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --shadow-sm: 0 2px 12px rgba(13,45,84,0.07);
+    --shadow-md: 0 8px 32px rgba(13,45,84,0.12);
+    --shadow-lg: 0 20px 60px rgba(13,45,84,0.18);
+    --radius: 12px;
+    --radius-sm: 8px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--grey-800);
+    background: var(--white);
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(10,22,40,0.96);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--font-display); font-size: 1.3rem; font-weight: 700;
+    color: var(--white); letter-spacing: -0.3px; text-decoration: none;
+  }
+  .nav-logo span { color: var(--green); }
+  .nav-logo-icon {
+    width: 34px; height: 34px;
+    background: linear-gradient(135deg, var(--blue-vivid), var(--green));
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .nav-links {
+    display: flex; gap: 32px; list-style: none;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.7); text-decoration: none;
+    font-size: 0.9rem; font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--white); }
+  .nav-cta {
+    background: var(--green); color: var(--blue-deep);
+    padding: 9px 22px; border-radius: var(--radius-sm);
+    font-weight: 600; font-size: 0.9rem; text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+  }
+  .nav-cta:hover { background: var(--green-dark); transform: translateY(-1px); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #050e1d 0%, #0a1e3c 40%, #0d2d54 70%, #0f3460 100%);
+    display: flex; align-items: center;
+    padding: 120px 5% 80px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 50% at 80% 50%, rgba(30,136,229,0.12) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 60% at 20% 80%, rgba(0,200,117,0.06) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 1240px; margin: 0 auto; width: 100%;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+    position: relative; z-index: 1;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(0,200,117,0.12); border: 1px solid rgba(0,200,117,0.3);
+    color: var(--green); padding: 6px 14px; border-radius: 50px;
+    font-size: 0.8rem; font-weight: 600; letter-spacing: 0.5px;
+    text-transform: uppercase; margin-bottom: 24px;
+  }
+  .hero-badge::before {
+    content: ''; width: 6px; height: 6px; background: var(--green);
+    border-radius: 50%; animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 4vw, 3.6rem);
+    font-weight: 800; line-height: 1.12;
+    color: var(--white); margin-bottom: 22px;
+    letter-spacing: -1px;
+  }
+  .hero h1 em { font-style: normal; color: var(--green); }
+  .hero-sub {
+    font-size: 1.05rem; color: rgba(255,255,255,0.65);
+    max-width: 480px; margin-bottom: 40px; line-height: 1.7;
+    font-weight: 300;
+  }
+  .hero-btns {
+    display: flex; gap: 14px; flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--green); color: var(--blue-deep);
+    padding: 15px 30px; border-radius: var(--radius-sm);
+    font-weight: 700; font-size: 0.95rem; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: all 0.2s; border: none; cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0,200,117,0.3);
+  }
+  .btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,200,117,0.4); }
+  .btn-outline {
+    background: transparent; color: var(--white);
+    padding: 15px 30px; border-radius: var(--radius-sm);
+    font-weight: 600; font-size: 0.95rem; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    transition: all 0.2s; cursor: pointer;
+  }
+  .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.05); transform: translateY(-2px); }
+  .hero-stats {
+    display: flex; gap: 36px; margin-top: 52px;
+    padding-top: 36px; border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .stat-item {}
+  .stat-num {
+    font-family: var(--font-display); font-size: 2rem; font-weight: 800;
+    color: var(--white); line-height: 1;
+  }
+  .stat-num span { color: var(--green); }
+  .stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 4px; }
+
+  /* Hero image side */
+  .hero-visual {
+    position: relative; display: flex; justify-content: center; align-items: center;
+  }
+  .hero-img-wrap {
+    position: relative; width: 100%; max-width: 520px;
+    border-radius: 20px; overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.08);
+  }
+  .hero-img-wrap img {
+    width: 100%; display: block;
+    filter: brightness(0.9) saturate(1.1);
+  }
+  .hero-img-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(13,45,84,0.2) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-float-card {
+    position: absolute;
+    background: rgba(10,22,40,0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    box-shadow: var(--shadow-lg);
+  }
+  .hfc-1 { bottom: -24px; left: -30px; }
+  .hfc-2 { top: 30px; right: -30px; }
+  .hfc-label { font-size: 0.72rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .hfc-val { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--white); }
+  .hfc-val span { color: var(--green); }
+  .hfc-row { display: flex; align-items: center; gap: 8px; }
+  .hfc-dot { width: 8px; height: 8px; background: var(--green); border-radius: 50%; box-shadow: 0 0 8px rgba(0,200,117,0.5); }
+
+  /* ── SECTION BASE ── */
+  section { padding: 100px 5%; }
+  .section-inner { max-width: 1240px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--blue-vivid);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 800; color: var(--blue-deep); letter-spacing: -0.5px;
+    line-height: 1.2; margin-bottom: 16px;
+  }
+  .section-sub {
+    font-size: 1rem; color: var(--grey-600); max-width: 560px;
+    line-height: 1.7; font-weight: 400;
+  }
+  .section-header { margin-bottom: 60px; }
+  .section-header.center { text-align: center; }
+  .section-header.center .section-sub { margin: 0 auto; }
+
+  /* ── SERVICES ── */
+  .services { background: var(--grey-100); }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .service-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 36px 30px;
+    border: 1px solid var(--grey-200);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    cursor: default;
+    position: relative; overflow: hidden;
+  }
+  .service-card::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--blue-vivid), var(--green));
+    transform: scaleX(0); transition: transform 0.3s ease; transform-origin: left;
+  }
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
+  }
+  .service-card:hover::after { transform: scaleX(1); }
+  .service-icon {
+    width: 52px; height: 52px;
+    background: var(--blue-pale);
+    border-radius: var(--radius-sm);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 22px;
+    transition: background 0.3s;
+  }
+  .service-card:hover .service-icon { background: var(--blue-light); }
+  .service-icon svg { width: 24px; height: 24px; color: var(--blue-primary); }
+  .service-card h3 {
+    font-family: var(--font-display); font-size: 1.05rem; font-weight: 700;
+    color: var(--blue-deep); margin-bottom: 10px; letter-spacing: -0.2px;
+  }
+  .service-card p { font-size: 0.9rem; color: var(--grey-600); line-height: 1.65; margin-bottom: 18px; }
+  .service-checks { display: flex; flex-direction: column; gap: 7px; }
+  .service-check {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.82rem; color: var(--grey-600); font-weight: 500;
+  }
+  .check-icon { color: var(--green); flex-shrink: 0; }
+  .check-icon svg { width: 15px; height: 15px; }
+
+  /* ── WHY US ── */
+  .why { background: var(--white); }
+  .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+  .why-card {
+    text-align: center; padding: 40px 20px;
+    border-radius: var(--radius);
+    background: var(--grey-100);
+    border: 1px solid var(--grey-200);
+    transition: all 0.25s;
+  }
+  .why-card:hover { background: var(--blue-pale); border-color: rgba(21,101,192,0.2); transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .why-icon-wrap {
+    width: 64px; height: 64px;
+    background: linear-gradient(135deg, var(--blue-primary), var(--blue-vivid));
+    border-radius: 16px; margin: 0 auto 22px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 24px rgba(21,101,192,0.25);
+  }
+  .why-icon-wrap svg { width: 28px; height: 28px; color: var(--white); }
+  .why-card h3 {
+    font-family: var(--font-display); font-size: 1rem; font-weight: 700;
+    color: var(--blue-deep); margin-bottom: 10px;
+  }
+  .why-card p { font-size: 0.87rem; color: var(--grey-600); line-height: 1.65; }
+
+  /* ── INDUSTRIES ── */
+  .industries { background: var(--grey-100); }
+  .industries-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; }
+  .industry-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 28px 16px;
+    text-align: center;
+    border: 1px solid var(--grey-200);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.25s;
+  }
+  .industry-card:hover { border-color: var(--blue-vivid); transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .industry-card:hover .ind-icon-wrap { background: linear-gradient(135deg, var(--blue-primary), var(--blue-vivid)); }
+  .industry-card:hover .ind-icon-wrap svg { color: var(--white); }
+  .ind-icon-wrap {
+    width: 52px; height: 52px; border-radius: 12px;
+    background: var(--blue-pale);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 14px; transition: all 0.25s;
+  }
+  .ind-icon-wrap svg { width: 24px; height: 24px; color: var(--blue-primary); transition: color 0.25s; }
+  .industry-card span { font-size: 0.82rem; font-weight: 600; color: var(--grey-800); line-height: 1.4; }
+
+  /* ── PROCESS ── */
+  .process { background: var(--white); }
+  .process-timeline {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    position: relative; gap: 0;
+  }
+  .process-timeline::before {
+    content: '';
+    position: absolute; top: 36px; left: calc(12.5% + 18px); right: calc(12.5% + 18px);
+    height: 2px;
+    background: linear-gradient(90deg, var(--blue-vivid), var(--green));
+    z-index: 0;
+  }
+  .process-step { text-align: center; padding: 0 20px; position: relative; z-index: 1; }
+  .step-circle {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue-primary), var(--blue-vivid));
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 24px; box-shadow: 0 8px 24px rgba(21,101,192,0.3);
+    border: 4px solid var(--white);
+    position: relative;
+  }
+  .step-circle svg { width: 26px; height: 26px; color: var(--white); }
+  .step-num {
+    position: absolute; top: -6px; right: -6px;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--green); color: var(--blue-deep);
+    font-size: 0.7rem; font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    border: 2px solid var(--white);
+  }
+  .process-step h3 {
+    font-family: var(--font-display); font-size: 0.95rem; font-weight: 700;
+    color: var(--blue-deep); margin-bottom: 10px;
+  }
+  .process-step p { font-size: 0.85rem; color: var(--grey-600); line-height: 1.6; }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--blue-deep);
+    padding: 30px 5%;
+  }
+  .trust-bar-inner {
+    max-width: 1240px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 20px;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 12px;
+    color: rgba(255,255,255,0.8); font-size: 0.88rem;
+  }
+  .trust-item svg { width: 20px; height: 20px; color: var(--green); flex-shrink: 0; }
+  .trust-divider { width: 1px; height: 32px; background: rgba(255,255,255,0.12); }
+
+  /* ── CTA ── */
+  .cta-section {
+    background: linear-gradient(135deg, #061122 0%, #0d2d54 50%, #0f3460 100%);
+    padding: 100px 5%;
+    position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 50% 80% at 50% 50%, rgba(30,136,229,0.1) 0%, transparent 70%);
+  }
+  .cta-inner {
+    max-width: 780px; margin: 0 auto;
+    text-align: center; position: relative; z-index: 1;
+  }
+  .cta-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(0,200,117,0.1); border: 1px solid rgba(0,200,117,0.3);
+    color: var(--green); padding: 6px 16px; border-radius: 50px;
+    font-size: 0.8rem; font-weight: 600; letter-spacing: 0.5px;
+    text-transform: uppercase; margin-bottom: 28px;
+  }
+  .cta-inner h2 {
+    font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800; color: var(--white); letter-spacing: -0.5px;
+    line-height: 1.15; margin-bottom: 18px;
+  }
+  .cta-inner h2 em { font-style: normal; color: var(--green); }
+  .cta-inner p { font-size: 1rem; color: rgba(255,255,255,0.6); margin-bottom: 40px; line-height: 1.7; }
+  .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-wa {
+    background: #25d366; color: #fff;
+    padding: 16px 32px; border-radius: var(--radius-sm);
+    font-weight: 700; font-size: 0.95rem; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 10px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+  }
+  .btn-wa:hover { background: #1fbd57; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,0.4); }
+  .btn-lg {
+    padding: 16px 36px; font-size: 1rem;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #060d18;
+    padding: 70px 5% 30px;
+    color: rgba(255,255,255,0.6);
+  }
+  .footer-grid {
+    max-width: 1240px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 60px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 30px;
+  }
+  .footer-brand { }
+  .footer-logo {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--font-display); font-size: 1.2rem; font-weight: 700;
+    color: var(--white); text-decoration: none; margin-bottom: 18px;
+  }
+  .footer-logo span { color: var(--green); }
+  .footer-logo-icon {
+    width: 32px; height: 32px;
+    background: linear-gradient(135deg, var(--blue-vivid), var(--green));
+    border-radius: 8px; display: flex; align-items: center; justify-content: center;
+  }
+  .footer-brand p { font-size: 0.88rem; line-height: 1.7; max-width: 280px; }
+  .footer-socials { display: flex; gap: 10px; margin-top: 24px; }
+  .social-btn {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: rgba(255,255,255,0.06);
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; transition: background 0.2s;
+    color: rgba(255,255,255,0.6);
+  }
+  .social-btn:hover { background: var(--blue-primary); color: var(--white); }
+  .social-btn svg { width: 16px; height: 16px; }
+  .footer-col h4 {
+    font-family: var(--font-display); font-size: 0.9rem; font-weight: 700;
+    color: var(--white); margin-bottom: 20px; letter-spacing: 0.2px;
+  }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.87rem; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--green); }
+  .footer-contact-item {
+    display: flex; gap: 10px; margin-bottom: 14px; align-items: flex-start;
+  }
+  .footer-contact-item svg { width: 16px; height: 16px; color: var(--green); flex-shrink: 0; margin-top: 2px; }
+  .footer-contact-item span { font-size: 0.86rem; line-height: 1.5; color: rgba(255,255,255,0.6); }
+  .footer-contact-item a { color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+  .footer-contact-item a:hover { color: var(--green); }
+  .footer-bottom {
+    max-width: 1240px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 0.82rem; flex-wrap: wrap; gap: 10px;
+  }
+  .footer-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-content > * {
+    animation: fadeUp 0.7s ease both;
+  }
+  .hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-content > *:nth-child(2) { animation-delay: 0.22s; }
+  .hero-content > *:nth-child(3) { animation-delay: 0.34s; }
+  .hero-content > *:nth-child(4) { animation-delay: 0.46s; }
+  .hero-content > *:nth-child(5) { animation-delay: 0.58s; }
+  .hero-visual { animation: fadeUp 0.9s ease 0.3s both; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .industries-grid { grid-template-columns: repeat(3, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .process-timeline { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+    .process-timeline::before { display: none; }
+  }
+  @media (max-width: 768px) {
+    nav .nav-links { display: none; }
+    .hero-inner { grid-template-columns: 1fr; gap: 50px; }
+    .hero-visual { order: -1; }
+    .hfc-1, .hfc-2 { display: none; }
+    .hero-img-wrap { max-width: 100%; }
+    .services-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .industries-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-timeline { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+    .trust-bar-inner { justify-content: center; }
+    .trust-divider { display: none; }
+    .hero-stats { gap: 24px; }
+  }
+
+  /* Misc */
+  .green-text { color: var(--green); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+    </div>
+    Arctic<span>Pro</span> UAE
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why-us">Why Us</a></li>
+    <li><a href="#industries">Industries</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#cta" class="nav-cta">Get Free Quote</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">Trusted UAE Cold Room Specialists</div>
+      <h1>Cold Room Installation in UAE – <em>Customized</em> Cold Room Solutions</h1>
+      <p class="hero-sub">End-to-end cold room design, supply, installation, and maintenance across the UAE. Precision-engineered solutions for every industry — built to comply with UAE food safety standards.</p>
+      <div class="hero-btns">
+        <a href="#cta" class="btn-primary btn-lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="17" height="17"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Request Free Quote
+        </a>
+        <a href="tel:+971000000000" class="btn-outline btn-lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="17" height="17"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.48 2 2 0 0 1 3.55 1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.88-.88a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Now
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">500<span>+</span></div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">15<span>+</span></div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">7<span> Emirates</span></div>
+          <div class="stat-label">UAE Coverage</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-wrap">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&q=90&fit=crop" alt="Walk-in Cold Room Interior UAE" />
+        <div class="hero-img-overlay"></div>
+      </div>
+      <div class="hero-float-card hfc-1">
+        <div class="hfc-label">System Status</div>
+        <div class="hfc-row">
+          <div class="hfc-dot"></div>
+          <div class="hfc-val"><span>Active</span> — -18°C</div>
+        </div>
+      </div>
+      <div class="hero-float-card hfc-2">
+        <div class="hfc-label">Energy Rating</div>
+        <div class="hfc-val"><span>A+</span> Certified</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      UAE Food Safety Compliant
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      24/7 After-Sales Support
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      Turnkey Installation
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      Fully Customizable Layouts
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      500+ Successful Projects
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="section-header center">
+      <div class="section-label">Our Cold Room Solutions</div>
+      <h2 class="section-title">Complete Cold Chain Services</h2>
+      <p class="section-sub">From small commercial units to large industrial warehouses — we design and install every type of cold room solution tailored to your exact requirements.</p>
+    </div>
+    <div class="services-grid">
+
+      <!-- Card 1 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8M8 12h8"/></svg>
+        </div>
+        <h3>Walk-In Chiller Room</h3>
+        <p>Precision-cooled chiller rooms designed for fresh produce, dairy, beverages, and perishable goods. Maintain temperatures from 0°C to 10°C.</p>
+        <div class="service-checks">
+          <div class="service-check"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Custom size & layout</div>
+          <div class="service-check"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>High-efficiency insulation panels</div>
+          <div class="service-check"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Digital temperature control</div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l-7 4v12l7 4 7-4V6z"/><path d="M12 22V12M5 6l7 6 7-6"/></svg>
+        </div>
+        <h3>Walk-In Freezer Room</h3>
+        <p>Heavy-duty freezer rooms engineered for meat, seafood, ice cream, and frozen food storage. Operating range: -18°C to -25°C.</p>
+        <div class="service-checks">
+          <div class="service-check"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Sub-zero precision control</div>
+          <div class="service-check"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Anti-frost flooring systems</div>
+          <div class="service-check"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Energy-saving refrigerants</div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3>Blast Freezer & Blast Chiller</h3>
+        <p>Rapid temperature reduction systems for commercial kitchens, food processors, and bakeries. Blast freeze in under 90 minutes.</p>
+        <div class="service-checks">
+          <div class="service-check"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>HACCP-compliant design</div>
+          <div class="service-check"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Multi-cycle programming</div>
+          <div class="service-check"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Fast blast down to -40°C</div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></svg>
+        </div>
+        <h3>Cold Storage Warehouse</h3>
+        <p>Large-scale refrigerated warehouses for logistics, distribution, and bulk cold storage. Multi-temperature zones available.</p>
+        <div class="service-checks">
+          <div class="service-check"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Multi-zone temperature control</div>
+          <div class="service-check"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>IoT remote monitoring</div>
+          <div class="service-check"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Forklift-accessible layouts</div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h.01M7 20v-4M12 20v-8M17 20V8M22 4v16"/></svg>
+        </div>
+        <h3>Industrial Cold Rooms</h3>
+        <p>Heavy-duty industrial refrigeration for large manufacturing plants, food production facilities, and pharma storage. Built for demanding environments.</p>
+        <div class="service-checks">
+          <div class="service-check"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Industrial-grade compressors</div>
+          <div class="service-check"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Redundant cooling systems</div>
+          <div class="service-check"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>GMP & ISO standards</div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Commercial & Restaurant Refrigeration</h3>
+        <p>Tailored refrigeration equipment for restaurants, hotels, and catering — undercounters, prep counters, display chillers, and bar systems.</p>
+        <div class="service-checks">
+          <div class="service-check"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Kitchen display solutions</div>
+          <div class="service-check"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Space-efficient units</div>
+          <div class="service-check"><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Dubai Municipality approved</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why" id="why-us">
+  <div class="section-inner">
+    <div class="section-header center">
+      <div class="section-label">Why Choose ArcticPro</div>
+      <h2 class="section-title">The UAE's Most Trusted Cold Room Partner</h2>
+      <p class="section-sub">We deliver end-to-end cold room solutions with unmatched precision, speed, and compliance across all seven Emirates.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+        </div>
+        <h3>Customized Solutions</h3>
+        <p>Every cold room is engineered to your specific dimensions, temperature requirements, and business workflow — no off-the-shelf compromises.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Fast Installation</h3>
+        <p>Our experienced installation teams complete most projects within 5–10 days. We minimize your downtime and get your operations running fast.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3>Energy Efficient Systems</h3>
+        <p>A+ rated refrigeration components and smart control systems reduce your electricity bills by up to 35% compared to conventional systems.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h3>UAE Food Safety Compliance</h3>
+        <p>All installations meet Dubai Municipality, ADAFSA, and HACCP standards. We handle all regulatory documentation and approvals for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries" id="industries">
+  <div class="section-inner">
+    <div class="section-header center">
+      <div class="section-label">Industries We Serve</div>
+      <h2 class="section-title">Cold Storage Solutions Across Every Sector</h2>
+      <p class="section-sub">From hospitality to pharmaceuticals, we deliver precise cold chain solutions tailored to the demands of your industry.</p>
+    </div>
+    <div class="industries-grid">
+      <div class="industry-card">
+        <div class="ind-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <span>Restaurants & Hotels</span>
+      </div>
+      <div class="industry-card">
+        <div class="ind-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </div>
+        <span>Supermarkets</span>
+      </div>
+      <div class="industry-card">
+        <div class="ind-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <span>Food Processing</span>
+      </div>
+      <div class="industry-card">
+        <div class="ind-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <span>Logistics & Warehousing</span>
+      </div>
+      <div class="industry-card">
+        <div class="ind-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11m0 0H5l-2 7h18l-2-7h-4m-6 0h6"/></svg>
+        </div>
+        <span>Pharmaceuticals</span>
+      </div>
+      <div class="industry-card">
+        <div class="ind-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+        </div>
+        <span>Catering Companies</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="section-inner">
+    <div class="section-header center">
+      <div class="section-label">How We Work</div>
+      <h2 class="section-title">Simple, Transparent Process</h2>
+      <p class="section-sub">From first contact to full operation — our proven 4-step approach ensures your cold room is delivered on time and to spec.</p>
+    </div>
+    <div class="process-timeline">
+      <div class="process-step">
+        <div class="step-circle">
+          <div class="step-num">1</div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Consultation & Site Visit</h3>
+        <p>Our engineers visit your location to assess space, capacity needs, temperature requirements, and utility setup. Free of charge.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-circle">
+          <div class="step-num">2</div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg>
+        </div>
+        <h3>Custom Design & Planning</h3>
+        <p>We create detailed CAD drawings, select the optimal refrigeration system, and provide a transparent, itemized quotation within 48 hours.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-circle">
+          <div class="step-num">3</div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Installation & Testing</h3>
+        <p>Our certified technicians handle full installation of panels, refrigeration units, doors, and electrics. Rigorous testing ensures perfect performance.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-circle">
+          <div class="step-num">4</div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Support & Maintenance</h3>
+        <p>We provide annual maintenance contracts, 24/7 emergency support, and remote monitoring to keep your cold room running at peak efficiency.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="cta">
+  <div class="cta-inner">
+    <div class="cta-badge">Free Consultation Available</div>
+    <h2>Need Reliable Cold Room Installation in <em>UAE</em>?</h2>
+    <p>Get a free on-site consultation and customized quotation from our engineering team. We serve Dubai, Abu Dhabi, Sharjah, and all UAE Emirates.</p>
+    <div class="cta-btns">
+      <a href="mailto:info@arcticpro.ae" class="btn-primary btn-lg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Get Free Consultation
+      </a>
+      <a href="https://wa.me/971000000000" class="btn-wa btn-lg" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        WhatsApp Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="footer-logo">
+        <div class="footer-logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        Arctic<span>Pro</span> UAE
+      </a>
+      <p>UAE's trusted cold room installation specialists. Delivering precision-engineered, energy-efficient, and fully compliant cold storage solutions across all Emirates since 2009.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="#" class="social-btn" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#" class="social-btn" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://wa.me/971000000000" class="social-btn" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#why-us">Why Choose Us</a></li>
+        <li><a href="#industries">Industries</a></li>
+        <li><a href="#process">Our Process</a></li>
+        <li><a href="#cta">Get a Quote</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul class="footer-links">
+        <li><a href="#services">Walk-In Chiller Rooms</a></li>
+        <li><a href="#services">Walk-In Freezer Rooms</a></li>
+        <li><a href="#services">Blast Freezers</a></li>
+        <li><a href="#services">Cold Warehouses</a></li>
+        <li><a href="#services">Industrial Cold Rooms</a></li>
+        <li><a href="#services">Restaurant Refrigeration</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.48 2 2 0 0 1 3.55 1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.88-.88a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span><a href="tel:+971000000000">+971 00 000 0000</a></span>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span><a href="mailto:info@arcticpro.ae">info@arcticpro.ae</a></span>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Al Quoz Industrial Area,<br>Dubai, United Arab Emirates</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Mon – Sat: 8:00 AM – 6:00 PM<br>24/7 Emergency Support</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 ArcticPro UAE. All rights reserved.</span>
+    <div style="display:flex;gap:20px;">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+
+  // Intersection observer for scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.service-card, .why-card, .industry-card, .process-step').forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = `opacity 0.5s ease ${i * 0.07}s, transform 0.5s ease ${i * 0.07}s`;
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
