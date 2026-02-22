@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Site Visit – Rohin Supplies</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --deep:   #0D2B3E;
+    --arctic: #0097B2;
+    --gold:   #C8962A;
+    --gold-light: #F0B840;
+    --frost:  #C2DFE8;
+  }
+
+
+
+  /* ── Card ── */
+  .cta-card {
+    position: relative;
+    width: 100%;
+    border-radius: 32px;
+    overflow: hidden;
+    border: 1px solid rgba(0,151,178,0.25);
+    animation: riseUp 0.7s cubic-bezier(.22,.68,0,1.2) both;
+  }
+
+  @keyframes riseUp {
+    from { opacity: 0; transform: translateY(30px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  /* Mesh gradient background */
+  .card-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 80% at 10% 110%,  rgba(0,151,178,0.35) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 60% at 90% -10%,  rgba(200,150,42,0.15) 0%, transparent 55%),
+      radial-gradient(ellipse 100% 100% at 50% 50%, rgba(0,97,120,0.25) 0%, transparent 80%),
+      linear-gradient(145deg, #0a2233 0%, #0d3347 50%, #071a28 100%);
+    z-index: 0;
+  }
+
+  /* Decorative ring top-right */
+  .ring {
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,151,178,0.18);
+    z-index: 1;
+    pointer-events: none;
+  }
+  .ring::after {
+    content: '';
+    position: absolute;
+    inset: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,151,178,0.1);
+  }
+
+  /* Decorative ring bottom-left */
+  .ring2 {
+    position: absolute;
+    bottom: -60px;
+    left: -60px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid rgba(200,150,42,0.12);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Content */
+  .card-inner {
+    position: relative;
+    z-index: 2;
+    padding: 64px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+  }
+
+  /* Gift badge */
+  .gift-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(200,150,42,0.12);
+    border: 1px solid rgba(200,150,42,0.35);
+    border-radius: 100px;
+    padding: 8px 20px;
+    margin-bottom: 32px;
+    animation: riseUp 0.6s 0.1s both;
+  }
+
+  .gift-icon {
+    font-size: 18px;
+    animation: bounce 2.5s ease-in-out infinite;
+  }
+
+  @keyframes bounce {
+    0%,100% { transform: translateY(0) rotate(0deg); }
+    30%      { transform: translateY(-5px) rotate(-8deg); }
+    60%      { transform: translateY(-2px) rotate(4deg); }
+  }
+
+  .gift-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+  }
+
+  /* Headline */
+  .headline {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.85rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    max-width: 640px;
+    margin-bottom: 22px;
+    animation: riseUp 0.6s 0.15s both;
+  }
+
+  .headline em {
+    font-style: normal;
+    color: var(--arctic);
+  }
+
+  /* Divider dot row */
+  .dot-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+    animation: riseUp 0.6s 0.2s both;
+  }
+  .dot-row::before, .dot-row::after {
+    content: '';
+    height: 1px;
+    width: 50px;
+    background: linear-gradient(90deg, transparent, rgba(0,151,178,0.4));
+  }
+  .dot-row::after { background: linear-gradient(90deg, rgba(0,151,178,0.4), transparent); }
+  .dot-row span {
+    width: 5px; height: 5px;
+    background: var(--arctic);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--arctic);
+  }
+
+  /* Body copy */
+  .body-copy {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: rgba(194,223,232,0.75);
+    line-height: 1.7;
+    max-width: 520px;
+    margin-bottom: 44px;
+    animation: riseUp 0.6s 0.25s both;
+  }
+
+  .body-copy strong {
+    color: rgba(194,223,232,0.95);
+    font-weight: 500;
+  }
+
+  /* CTA Button */
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    color: #1a1000;
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    padding: 18px 40px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 32px rgba(200,150,42,0.35), 0 2px 8px rgba(0,0,0,0.3);
+    animation: riseUp 0.6s 0.3s both;
+    text-decoration: none;
+  }
+
+  /* Shimmer sweep */
+  .cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.28), transparent);
+    transform: skewX(-20deg);
+    animation: shimmer 3s 1s infinite;
+  }
+
+  @keyframes shimmer {
+    0%   { left: -100%; }
+    40%,100% { left: 160%; }
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 14px 40px rgba(200,150,42,0.45), 0 4px 12px rgba(0,0,0,0.4);
+  }
+
+  .cta-btn:active {
+    transform: translateY(0) scale(0.99);
+  }
+
+  .btn-icon {
+    font-size: 1.1rem;
+  }
+
+  /* Below button — trust micro-copy */
+  .micro-trust {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: riseUp 0.6s 0.38s both;
+  }
+
+  .micro-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.76rem;
+    color: rgba(194,223,232,0.5);
+    font-weight: 400;
+  }
+
+  .micro-icon {
+    font-size: 13px;
+    opacity: 0.7;
+  }
+
+  .micro-sep {
+    width: 3px; height: 3px;
+    background: rgba(194,223,232,0.2);
+    border-radius: 50%;
+  }
+
+  /* Floating particles */
+  .particles {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .p {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    animation: float linear infinite;
+  }
+
+  @keyframes float {
+    0%   { opacity: 0;    transform: translateY(0) scale(0.5); }
+    10%  { opacity: 0.6; }
+    90%  { opacity: 0.3; }
+    100% { opacity: 0;    transform: translateY(-120px) scale(1); }
+  }
+
+  .p:nth-child(1)  { width:4px; height:4px; background:var(--arctic); left:12%; top:80%; animation-duration:4.2s; animation-delay:0s; }
+  .p:nth-child(2)  { width:3px; height:3px; background:var(--gold-light); left:25%; top:75%; animation-duration:5.1s; animation-delay:0.8s; }
+  .p:nth-child(3)  { width:5px; height:5px; background:var(--arctic); left:40%; top:85%; animation-duration:3.8s; animation-delay:1.5s; }
+  .p:nth-child(4)  { width:3px; height:3px; background:rgba(255,255,255,0.5); left:60%; top:78%; animation-duration:4.6s; animation-delay:0.3s; }
+  .p:nth-child(5)  { width:4px; height:4px; background:var(--gold-light); left:75%; top:82%; animation-duration:5.5s; animation-delay:1.1s; }
+  .p:nth-child(6)  { width:3px; height:3px; background:var(--arctic); left:88%; top:70%; animation-duration:4.0s; animation-delay:2.0s; }
+  .p:nth-child(7)  { width:2px; height:2px; background:rgba(255,255,255,0.4); left:50%; top:90%; animation-duration:3.5s; animation-delay:0.6s; }
+  .p:nth-child(8)  { width:4px; height:4px; background:var(--arctic); left:5%;  top:60%; animation-duration:6.0s; animation-delay:1.8s; }
+  .p:nth-child(9)  { width:3px; height:3px; background:var(--gold-light); left:95%; top:55%; animation-duration:4.8s; animation-delay:0.4s; }
+  .p:nth-child(10) { width:2px; height:2px; background:rgba(255,255,255,0.3); left:33%; top:65%; animation-duration:5.3s; animation-delay:2.5s; }
+
+  @media (max-width: 640px) {
+    .card-inner { padding: 48px 28px; }
+    .headline   { font-size: 1.65rem; }
+    .body-copy  { font-size: 0.95rem; }
+    .cta-btn    { padding: 16px 30px; font-size: 0.92rem; }
+    .micro-trust { gap: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cta-card">
+  <!-- Backgrounds & decorations -->
+  <div class="card-bg"></div>
+  <div class="ring"></div>
+  <div class="ring2"></div>
+
+  <!-- Floating particles -->
+  <div class="particles">
+    <div class="p"></div><div class="p"></div><div class="p"></div>
+    <div class="p"></div><div class="p"></div><div class="p"></div>
+    <div class="p"></div><div class="p"></div><div class="p"></div>
+    <div class="p"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="card-inner">
+
+    <div class="gift-badge">
+      <span class="gift-icon">🎁</span>
+      <span class="gift-label">Limited Free Offer</span>
+    </div>
+
+    <h2 class="headline">
+      Free Site Visit &amp; Consultation<br>
+      Available Across <em>UAE</em>
+    </h2>
+
+    <div class="dot-row"><span></span></div>
+
+    <p class="body-copy">
+      Not sure what size or system you need? Our experts will
+      <strong>visit your location, assess your space,</strong> and
+      recommend the most efficient solution —
+      <strong>at no cost.</strong>
+    </p>
+
+    <a href="#" class="cta-btn">
+      <span class="btn-icon">📅</span>
+      Book Your Free Site Visit
+    </a>
+
+    <div class="micro-trust">
+      <div class="micro-item"><span class="micro-icon">✔</span> No obligation</div>
+      <div class="micro-sep"></div>
+      <div class="micro-item"><span class="micro-icon">✔</span> 100% Free</div>
+      <div class="micro-sep"></div>
+      <div class="micro-item"><span class="micro-icon">✔</span> All 7 Emirates</div>
+      <div class="micro-sep"></div>
+      <div class="micro-item"><span class="micro-icon">✔</span> Fast Response</div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
