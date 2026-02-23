@@ -78,7 +78,7 @@ body {
     right: 0;
     z-index: 200;
     padding: 0 48px;
-    height: 64px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -96,7 +96,7 @@ body {
 }
 
 .nav-logo img {
-    max-width: 160px;
+    max-width: 200px;
 }
 
 .nav-wordmark {
@@ -155,8 +155,8 @@ body {
     color: var(--ink);
     font-family: var(--f-display);
     font-weight: 700;
-    font-size: 0.825rem;
-    padding: 8px 20px;
+    font-size: 14px;
+    padding: 12px 25px;
     border-radius: var(--r-sm);
     text-decoration: none;
     letter-spacing: 0.01em;
@@ -337,6 +337,7 @@ body {
     gap: 14px;
     margin-bottom: 52px;
 }
+
 
 .cta-primary {
     display: inline-flex;
@@ -615,11 +616,11 @@ body {
 }
 
 .section {
-    padding: 120px 0;
+    padding: 50px 0;
 }
 
 .section-sm {
-    padding: 80px 0;
+    padding: 50px 0;
 }
 
 .eyebrow {
@@ -700,7 +701,7 @@ body {
 /* Featured row — big block */
 .services-featured {
     display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2px;
     margin-bottom: 2px;
     background: var(--ice);
@@ -711,7 +712,7 @@ body {
 /* Secondary row */
 .services-secondary {
     display: grid;
-    grid-template-columns: 1fr 1fr 1.4fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2px;
     background: var(--ice);
     border-radius: 0 0 var(--r-xl) var(--r-xl);
@@ -720,7 +721,7 @@ body {
 
 .svc-block {
     background: var(--pure);
-    padding: 44px 40px;
+    padding: 34px 40px 4px;
     position: relative;
     overflow: hidden;
     cursor: default;
@@ -745,7 +746,7 @@ body {
 }
 
 .svc-block.large {
-    padding: 56px 52px;
+    padding: 46px 52px 16px;
 }
 
 /* animated border-bottom on hover */
@@ -1060,7 +1061,7 @@ body {
 }
 
 .process-header {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
@@ -1815,7 +1816,6 @@ footer {
 
 .service-section-head {
     margin-bottom: 30px;
-    margin-top: 50px;
 }
 
 
@@ -2254,7 +2254,7 @@ footer {
 
 .cta-section-two {
     background: var(--white);
-    padding: 100px 0;
+    padding: 40px 0;
 }
 
 /* lead form */
@@ -2263,7 +2263,7 @@ footer {
     width: 100%;
     position: relative;
     background: linear-gradient(170deg, var(--ink) 0%, var(--ink-60) 40%, #102040 100%);
-    padding: 120px 0;
+    padding: 80px 0;
 }
 
 
@@ -2738,7 +2738,7 @@ footer {
 
 /* clients section */
 .client-slider-section {
-    padding: 80px 0 100px;
+    padding: 40px 0 30px;
 }
 
 .roohin-clients__slide {
@@ -2757,11 +2757,11 @@ footer {
 }
 
 .footer-logo-wrap img {
-    width: 160px;
+    width: 200px;
 }
 
 .cta-section {
-    padding: 100px 0 0;
+    padding: 60px 0 0;
 }
 
 /* trust bar */
@@ -3247,7 +3247,7 @@ footer {
 
 /* ── INDUSTRIES ── */
 .industries {
-    padding: 100px 0 30px;
+    padding: 60px 0 20px;
 }
 
 .industries-grid {
@@ -3341,12 +3341,13 @@ footer {
     }
 
     .nav-logo img {
-        max-width: 120px;
+        max-width: 160px;
     }
 
     .hero-ctas {
         flex-direction: column;
         align-items: flex-start;
+        margin-bottom: 0;
     }
 }
 
@@ -3541,5 +3542,62 @@ footer {
 
     .sticky-float {
         display: none
+    }
+}
+
+.nav-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #25d366;
+    color: #fff;
+    font-family: var(--fh);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 3px 14px rgba(37, 211, 102, .35);
+    transition: all .2s;
+    white-space: nowrap
+}
+
+.nav-wa:hover {
+    background: #1fbd57;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 22px rgba(37, 211, 102, .5)
+}
+.svc-img{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.hero-mobile-img{
+    display: none;
+}
+
+@media(max-width:768px) {
+    .nav-wa{
+        display: none;
+    }
+    .nav-btn{
+        padding: 10px 20px;
+    }
+    .svc-block{
+        padding: 34px 20px 4px;
+    }
+    .hero-content{
+        flex-direction: column;
+    }
+    .hero-mobile-img{
+        display: block;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        margin-top: 20px;
+        border-radius: 20px;
     }
 }
