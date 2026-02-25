@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roohin Supplies – Cold Room Installation UAE</title>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --dk:#080d18;--dk2:#0f1a2b;--dk3:#162238;
+  --sl:#3d5168;--ms:#8fa3be;--cl:#c8d8ea;--ic:#eef4fb;--wh:#f7fafd;--pu:#ffffff;
+  --gd:#d4a843;--gdl:#e8c06a;--gdp:#fdf6e3;
+  --bl:#1463b5;--blv:#1b78dc;--blp:#e6f1fb;
+  --gr:#15a662;--grp:#e6f7f0;
+  --fh:'Onest',sans-serif;--fb:'Lato',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--pu);color:var(--dk);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* ══ NAV ══ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:999;
+  height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;
+  background:rgba(8,13,24,0.96);backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,0.07);
+}
+.logo img{height:44px;width:auto;display:block}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-family:var(--fh);font-size:.875rem;font-weight:500;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--gdl)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav-phone{font-family:var(--fh);font-size:.82rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
+.nav-phone:hover{color:var(--gd)}
+.nav-wa{display:inline-flex;align-items:center;gap:7px;background:#25d366;color:#fff;font-family:var(--fh);font-weight:700;font-size:.875rem;padding:10px 20px;border-radius:8px;text-decoration:none;box-shadow:0 3px 14px rgba(37,211,102,.35);transition:all .2s;white-space:nowrap}
+.nav-wa:hover{background:#1fbd57;transform:translateY(-1px);box-shadow:0 6px 22px rgba(37,211,102,.5)}
+
+/* ══ BUTTONS ══ */
+.btn-gold{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--gd);color:var(--dk);
+  font-family:var(--fh);font-weight:800;font-size:.875rem;
+  padding:11px 22px;border-radius:8px;text-decoration:none;
+  box-shadow:0 3px 16px rgba(212,168,67,.4);transition:all .2s;
+  white-space:nowrap;border:none;cursor:pointer;letter-spacing:-.01em;
+}
+.btn-gold:hover{background:var(--gdl);transform:translateY(-1px);box-shadow:0 6px 24px rgba(212,168,67,.5)}
+.btn-gold svg{width:15px;height:15px;flex-shrink:0}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:8px;
+  background:transparent;color:rgba(255,255,255,.7);
+  font-family:var(--fh);font-weight:600;font-size:.875rem;
+  padding:11px 20px;border-radius:8px;text-decoration:none;
+  border:1px solid rgba(255,255,255,.2);transition:all .2s;white-space:nowrap;
+}
+.btn-ghost:hover{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-wa{
+  display:inline-flex;align-items:center;gap:9px;
+  background:#25d366;color:#fff;
+  font-family:var(--fh);font-weight:800;font-size:.9rem;
+  padding:13px 28px;border-radius:12px;text-decoration:none;
+  box-shadow:0 4px 20px rgba(37,211,102,.35);transition:all .2s;white-space:nowrap;
+}
+.btn-wa:hover{background:#1fbd57;transform:translateY(-2px)}
+.btn-wa svg,.btn-wa img{width:18px;height:18px}
+
+/* ══ HERO ══ */
+.hero{
+  min-height:100vh;padding-top:66px;
+  background:var(--dk);position:relative;overflow:hidden;
+  display:flex;align-items:stretch;
+}
+.hero-bg{position:absolute;inset:0;pointer-events:none}
+.h-grid{
+  position:absolute;inset:0;
+  background-image:linear-gradient(rgba(212,168,67,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(212,168,67,.04) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse 70% 80% at 45% 50%,black,transparent 70%);
+}
+.h-glow{position:absolute;left:-5%;top:5%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(212,168,67,.07) 0%,transparent 65%)}
+.h-img{
+  position:absolute;top:0;right:0;bottom:0;width:50%;
+  clip-path:polygon(14% 0%,100% 0%,100% 100%,0% 100%);overflow:hidden;
+}
+.h-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(8,13,24,1) 0%,rgba(8,13,24,.55) 30%,rgba(8,13,24,.12) 100%);z-index:1}
+.h-img img{width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.52) saturate(.85)}
+
+.hero-inner{
+  position:relative;z-index:10;
+  max-width:1280px;margin:0 auto;width:100%;
+  display:flex;align-items:center;
+  padding:80px 5% 72px;
+  min-height:calc(100vh - 66px);
+}
+.hero-left{max-width:555px}
+
+.h-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:26px}
+.h-dash{width:28px;height:1.5px;background:var(--gd)}
+.h-lbl{font-family:var(--fh);font-size:.7rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gd)}
+
+h1.hh{
+  font-family:var(--fh);font-weight:900;
+  font-size:clamp(2.3rem,5vw,4.4rem);
+  line-height:1.0;letter-spacing:-2px;color:var(--pu);margin-bottom:20px;
+}
+h1.hh .gd{color:var(--gd)}
+h1.hh .ol{color:transparent;-webkit-text-stroke:1.5px rgba(212,168,67,.6)}
+
+.h-sub{font-size:.975rem;line-height:1.82;font-weight:300;color:rgba(255,255,255,.5);max-width:460px;margin-bottom:30px}
+
+.h-bullets{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;margin-bottom:34px}
+.hb{display:flex;align-items:flex-start;gap:9px}
+.hb-c{width:19px;height:19px;flex-shrink:0;margin-top:1px;background:rgba(21,166,98,.14);border:1px solid rgba(21,166,98,.3);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.hb-c svg{width:10px;height:10px;color:var(--gr)}
+.hb span{font-family:var(--fh);font-size:.84rem;font-weight:600;color:rgba(255,255,255,.75);line-height:1.4}
+
+.h-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px}
+.h-cta-main{font-size:.95rem;padding:14px 26px}
+
+.h-micro{display:flex;align-items:center;gap:18px}
+.mc{display:flex;align-items:center;gap:8px;text-decoration:none;color:rgba(255,255,255,.43);font-family:var(--fh);font-size:.82rem;font-weight:500;transition:color .2s}
+.mc:hover{color:var(--gdl)}
+.mc-ic{width:33px;height:33px;border-radius:50%;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center}
+.mc-ic svg{width:14px;height:14px}
+.mc-sep{width:1px;height:18px;background:rgba(255,255,255,.1)}
+
+/* Float cards */
+.hero-floats{position:absolute;right:2.5%;bottom:10%;z-index:20;display:flex;flex-direction:column;gap:11px;pointer-events:none}
+.fc{background:rgba(8,13,24,.9);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.09);border-radius:13px;padding:15px 19px;box-shadow:0 20px 60px rgba(0,0,0,.2);min-width:185px}
+.fc-l{font-family:var(--fh);font-size:.63rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:5px}
+.fc-v{font-family:var(--fh);font-weight:800;font-size:1.3rem;color:var(--pu);letter-spacing:-.5px;line-height:1}
+.fc-v em{font-style:normal;color:var(--gd)}
+.fc-s{font-size:.67rem;color:rgba(255,255,255,.3);margin-top:3px}
+.fc-live{display:flex;align-items:center;gap:7px;font-family:var(--fh);font-size:.77rem;color:rgba(255,255,255,.55)}
+.ld{width:7px;height:7px;border-radius:50%;background:var(--gr);box-shadow:0 0 8px rgba(21,166,98,.6);animation:lp 2s infinite}
+@keyframes lp{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+
+/* ══ TRUST BAR ══ */
+.trust-bar{background:#0c1322;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);padding:0 5%}
+.tb-inner{max-width:1280px;margin:0 auto;display:flex;flex-wrap:wrap}
+.tb-item{display:flex;align-items:center;gap:10px;padding:20px 24px;flex:1;min-width:210px;border-right:1px solid rgba(255,255,255,.06)}
+.tb-item:first-child{padding-left:0}
+.tb-item:last-child{border-right:none}
+.tb-c{width:22px;height:22px;flex-shrink:0;background:rgba(21,166,98,.1);border:1px solid rgba(21,166,98,.25);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.tb-c svg{width:11px;height:11px;color:var(--gr)}
+.tb-item span{font-family:var(--fh);font-size:.8rem;font-weight:600;color:rgba(255,255,255,.55);line-height:1.35}
+
+/* ══ LAYOUT ══ */
+.wrap{max-width:1280px;margin:0 auto;padding:0 5%}
+.sec{padding:96px 0}
+.sec-sm{padding:68px 0}
+
+.eyebrow{display:flex;align-items:center;gap:9px;margin-bottom:13px}
+.ey-d{width:6px;height:6px;border-radius:50%;background:var(--gd)}
+.ey-t{font-family:var(--fh);font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gd)}
+
+.sh2{font-family:var(--fh);font-size:clamp(1.9rem,3.5vw,2.9rem);font-weight:900;letter-spacing:-1px;line-height:1.08;color:var(--dk);margin-bottom:14px}
+.sh2 em{font-style:normal;color:var(--blv)}
+.sh2.light{color:var(--pu)}
+.sh2.gold em{color:var(--gd)}
+
+/* ══ PROBLEM/SOLUTION ══ */
+.prob-sec{background:var(--ic)}
+.prob-g{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.prob-img{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.18)}
+.prob-img img{width:100%;display:block;filter:brightness(.88) saturate(.9)}
+.img-badge{position:absolute;bottom:20px;left:20px;background:rgba(8,13,24,.9);backdrop-filter:blur(14px);border:1px solid rgba(212,168,67,.2);border-radius:13px;padding:14px 18px}
+.ib-n{font-family:var(--fh);font-weight:900;font-size:1.8rem;color:var(--gd);letter-spacing:-1px;line-height:1}
+.ib-t{font-size:.72rem;color:rgba(255,255,255,.45);font-family:var(--fh);margin-top:3px}
+.prob-body{font-size:.975rem;line-height:1.82;color:var(--sl);font-weight:300;margin-bottom:28px}
+.prob-tags{display:flex;flex-wrap:wrap;gap:10px}
+.ptag{display:inline-flex;align-items:center;gap:7px;background:var(--pu);border:1px solid var(--cl);border-radius:8px;padding:9px 16px;font-family:var(--fh);font-size:.8rem;font-weight:600;color:var(--dk3);box-shadow:0 2px 8px rgba(11,15,26,.06)}
+.ptag svg{width:14px;height:14px;color:var(--gd)}
+
+/* ══ SERVICES ══ */
+.svc-sec{background:var(--pu)}
+.svc-hdr{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;margin-bottom:52px}
+.svc-hdr-r p{font-size:.975rem;color:var(--sl);line-height:1.8;font-weight:300;border-left:3px solid var(--gd);padding-left:18px}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.svc-card{background:var(--wh);border-radius:22px;border:1px solid rgba(200,216,234,.8);padding:34px 28px;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s}
+.svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gd),var(--gdl));transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.svc-card:hover{transform:translateY(-5px);box-shadow:0 20px 60px rgba(0,0,0,.14);border-color:rgba(212,168,67,.3)}
+.svc-card:hover::after{transform:scaleX(1)}
+.svc-card.dark{background:linear-gradient(135deg,var(--dk) 0%,var(--dk3) 100%);border-color:rgba(212,168,67,.12);grid-column:span 2}
+.svc-card.dark .svc-n{color:rgba(255,255,255,.2)}
+.svc-card.dark .svc-h{color:var(--pu)}
+.svc-card.dark .svc-p{color:rgba(255,255,255,.45)}
+.svc-card.dark .svc-ct{color:rgba(255,255,255,.6)}
+.svc-card.dark .svc-ico{background:rgba(212,168,67,.12);border-color:rgba(212,168,67,.2)}
+.svc-card.dark .svc-ico svg{color:var(--gd)}
+.svc-n{font-family:var(--fh);font-size:.63rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ms);margin-bottom:20px;display:block}
+.svc-ico{width:44px;height:44px;border-radius:8px;background:var(--blp);border:1px solid rgba(20,99,181,.12);display:flex;align-items:center;justify-content:center;margin-bottom:15px;transition:background .3s,border-color .3s}
+.svc-card:not(.dark):hover .svc-ico{background:var(--gdp);border-color:rgba(212,168,67,.3)}
+.svc-card:not(.dark):hover .svc-ico svg{color:var(--gd)}
+.svc-ico svg{width:22px;height:22px;color:var(--bl);transition:color .3s}
+.svc-h{font-family:var(--fh);font-weight:800;font-size:1.05rem;color:var(--dk);letter-spacing:-.3px;margin-bottom:9px;line-height:1.2}
+.svc-p{font-size:.865rem;color:#6a7e94;line-height:1.75;margin-bottom:16px}
+.svc-cks{display:flex;flex-direction:column;gap:7px}
+.svc-ck{display:flex;align-items:flex-start;gap:8px}
+.svc-ck svg{width:14px;height:14px;color:var(--gr);flex-shrink:0;margin-top:2px}
+.svc-ct{font-family:var(--fh);font-size:.79rem;font-weight:600;color:#7a8fa4;line-height:1.4}
+.svc-cta{text-align:center;margin-top:44px}
+
+/* ══ WHY US ══ */
+.why-sec{background:linear-gradient(155deg,var(--dk) 0%,#102038 55%,#0d2044 100%);position:relative;overflow:hidden}
+.why-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 55% at 10% 85%,rgba(212,168,67,.06) 0%,transparent 60%),radial-gradient(ellipse 40% 50% at 90% 10%,rgba(20,99,181,.05) 0%,transparent 60%);pointer-events:none}
+.why-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:56px;gap:40px;position:relative;z-index:1}
+.why-note{font-size:.875rem;color:rgba(255,255,255,.3);max-width:260px;text-align:right;line-height:1.7;font-weight:300}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;position:relative;z-index:1}
+.why-card{background:rgba(255,255,255,.038);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:32px 26px;transition:all .3s}
+.why-card:hover{background:rgba(255,255,255,.065);border-color:rgba(212,168,67,.22);transform:translateY(-4px)}
+.why-card.wide{grid-column:span 3;display:flex;align-items:flex-start;gap:24px}
+.why-card.wide .why-body{flex:1}
+.why-ico{width:48px;height:48px;border-radius:12px;margin-bottom:22px;flex-shrink:0;background:rgba(212,168,67,.1);border:1px solid rgba(212,168,67,.18);display:flex;align-items:center;justify-content:center}
+.why-ico svg{width:22px;height:22px;color:var(--gd)}
+.why-h{font-family:var(--fh);font-size:.975rem;font-weight:800;color:var(--pu);margin-bottom:9px;letter-spacing:-.2px}
+.why-t{font-size:.845rem;color:rgba(255,255,255,.42);line-height:1.7;font-weight:300}
+.why-tag{display:inline-block;margin-top:16px;font-family:var(--fh);font-size:.67rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gr);background:rgba(21,166,98,.08);border:1px solid rgba(21,166,98,.15);border-radius:50px;padding:4px 12px}
+
+/* ══ WHY ROOHIN CARDS ══ */
+.why-roohin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;position:relative;z-index:1}
+.why-roohin-card{background:rgba(255,255,255,.038);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:28px 24px;transition:all .3s;display:flex;flex-direction:column;gap:14px}
+.why-roohin-card:hover{background:rgba(255,255,255,.065);border-color:rgba(212,168,67,.25);transform:translateY(-4px)}
+.why-roohin-card-wide{grid-column:span 3;flex-direction:row;align-items:center;gap:24px;padding:26px 28px}
+.why-roohin-icon-wrap{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.why-roohin-icon-wrap svg{width:22px;height:22px;color:var(--gd)}
+.why-roohin-card-title{font-family:var(--fh);font-size:.92rem;font-weight:700;color:var(--pu);line-height:1.45;letter-spacing:-.1px;flex:1}
+.why-roohin-check-tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--fh);font-size:.68rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gr);background:rgba(21,166,98,.08);border:1px solid rgba(21,166,98,.18);border-radius:50px;padding:5px 12px;width:fit-content}
+.why-roohin-check-dot{width:14px;height:14px;border-radius:50%;background:var(--gr);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.why-roohin-check-dot svg{width:10px;height:10px}
+@media(max-width:1100px){.why-roohin-grid{grid-template-columns:repeat(2,1fr)}.why-roohin-card-wide{grid-column:span 2}}
+@media(max-width:768px){.why-roohin-grid{grid-template-columns:1fr}.why-roohin-card-wide{grid-column:1;flex-direction:column}}
+
+/* ══ INDUSTRIES ══ */
+.ind-sec{background:var(--ic)}
+.ind-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.ind-card{background:var(--pu);border-radius:16px;padding:28px 16px;text-align:center;border:1px solid var(--cl);box-shadow:0 2px 8px rgba(11,15,26,.05);transition:all .25s}
+.ind-card:hover{border-color:var(--gd);transform:translateY(-4px);box-shadow:0 12px 32px rgba(212,168,67,.15)}
+.ind-card:hover .ind-ico{background:linear-gradient(135deg,var(--gd),var(--gdl));border-color:transparent}
+.ind-card:hover .ind-ico svg{color:var(--dk)}
+.ind-ico{width:52px;height:52px;border-radius:12px;background:rgba(212,168,67,.1);border:1px solid rgba(212,168,67,.2);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;transition:all .25s}
+.ind-ico svg{width:24px;height:24px;color:var(--gd);transition:color .25s}
+.ind-card span{font-size:.82rem;font-weight:700;color:var(--dk3);line-height:1.4;font-family:var(--fh)}
+@media(max-width:1100px){.ind-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:768px){.ind-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ══ FREE OFFER ══ */
+.offer-sec{background:var(--gdp);border-top:2px solid rgba(212,168,67,.15);border-bottom:2px solid rgba(212,168,67,.15)}
+.offer-inner{display:flex;align-items:center;justify-content:space-between;gap:56px}
+.offer-left{flex:1}
+.offer-row{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+.offer-icon{width:52px;height:52px;border-radius:12px;flex-shrink:0;background:var(--gd);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(212,168,67,.4)}
+.offer-icon svg{width:26px;height:26px;color:var(--dk)}
+.offer-h{font-family:var(--fh);font-size:1.45rem;font-weight:900;color:var(--dk);letter-spacing:-.5px;line-height:1.15}
+.offer-p{font-size:.975rem;color:var(--sl);line-height:1.8;font-weight:300;max-width:490px}
+
+/* ══ FORM ══ */
+.form-sec{background:var(--wh)}
+.form-g{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.form-body{font-size:.975rem;color:var(--sl);line-height:1.8;font-weight:300;margin-bottom:26px}
+.form-feats{display:flex;flex-direction:column;gap:12px}
+.ff{display:flex;align-items:center;gap:10px}
+.ff-c{width:20px;height:20px;flex-shrink:0;background:rgba(21,166,98,.12);border:1px solid rgba(21,166,98,.25);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.ff-c svg{width:10px;height:10px;color:var(--gr)}
+.ff span{font-family:var(--fh);font-size:.875rem;font-weight:600;color:var(--sl)}
+.form-box{background:var(--pu);border-radius:28px;padding:42px 38px;box-shadow:0 20px 60px rgba(0,0,0,.13);border:1px solid var(--cl)}
+.form-title{font-family:var(--fh);font-size:1.25rem;font-weight:900;color:var(--dk);letter-spacing:-.3px;margin-bottom:5px}
+.form-hint{font-size:.82rem;color:var(--ms);margin-bottom:24px}
+.form-fields{display:flex;flex-direction:column;gap:13px}
+.fg{display:flex;flex-direction:column;gap:5px}
+.fg label{font-family:var(--fh);font-size:.75rem;font-weight:700;color:#1c2a3d;letter-spacing:.3px;text-transform:uppercase}
+.fg input,.fg select,.fg textarea{padding:12px 14px;border-radius:8px;border:1.5px solid var(--cl);background:var(--ic);font-family:var(--fb);font-size:.9rem;color:var(--dk);transition:border-color .2s,box-shadow .2s;outline:none;width:100%}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gd);box-shadow:0 0 0 3px rgba(212,168,67,.12);background:var(--pu)}
+.fg textarea{resize:vertical;min-height:72px}
+.form-btn{width:100%;padding:15px;border-radius:8px;background:var(--gd);color:var(--dk);font-family:var(--fh);font-weight:900;font-size:.975rem;border:none;cursor:pointer;letter-spacing:-.02em;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .25s;margin-top:4px;box-shadow:0 4px 20px rgba(212,168,67,.4)}
+.form-btn:hover{background:var(--gdl);transform:translateY(-1px);box-shadow:0 8px 28px rgba(212,168,67,.5)}
+.form-btn svg{width:16px;height:16px}
+.form-priv{font-size:.75rem;color:var(--ms);text-align:center;margin-top:10px}
+
+/* ══ WHATSAPP ══ */
+.wa-sec{background:var(--dk);padding:80px 5%;text-align:center;position:relative;overflow:hidden}
+.wa-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 75% at 50% 50%,rgba(37,211,102,.05) 0%,transparent 65%)}
+.wa-inner{max-width:540px;margin:0 auto;position:relative;z-index:1}
+.wa-ring{width:70px;height:70px;border-radius:50%;margin:0 auto 22px;background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.2);display:flex;align-items:center;justify-content:center}
+.wa-ring svg{width:30px;height:30px;color:#25d366}
+.wa-h{font-family:var(--fh);font-size:2rem;font-weight:900;color:var(--pu);letter-spacing:-.5px;margin-bottom:12px}
+.wa-sub{font-size:.95rem;color:rgba(255,255,255,.42);line-height:1.8;font-weight:300;margin-bottom:28px}
+
+/* ══ TESTIMONIALS ══ */
+.testi-sec{background:var(--ic)}
+.testi-g{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.testi-card{background:var(--pu);border-radius:22px;padding:34px 30px;border:1px solid var(--cl);box-shadow:0 2px 8px rgba(0,0,0,.06);transition:all .3s}
+.testi-card:hover{transform:translateY(-3px);box-shadow:0 20px 60px rgba(0,0,0,.12);border-color:rgba(212,168,67,.25)}
+.t-stars{display:flex;gap:3px;margin-bottom:16px}
+.t-stars svg{width:15px;height:15px;color:var(--gd)}
+.t-q{font-size:1.05rem;line-height:1.7;color:#1c2a3d;font-style:italic;font-weight:300;margin-bottom:20px;padding-left:12px;border-left:3px solid rgba(212,168,67,.35)}
+.t-foot{display:flex;align-items:center;gap:12px;border-top:1px solid var(--cl);padding-top:16px}
+.t-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--gd),var(--bl));display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:800;font-size:.9rem;color:#fff;flex-shrink:0}
+.t-name{font-family:var(--fh);font-size:.875rem;font-weight:700;color:var(--dk)}
+.t-role{font-size:.77rem;color:var(--ms)}
+
+/* ══ POWER CTA ══ */
+.power-sec{background:var(--dk);padding:0}
+.power-wrap{margin:0 4% 80px;background:linear-gradient(135deg,#101929 0%,#162340 45%,#0e2245 100%);border-radius:28px;padding:88px 5%;text-align:center;border:1px solid rgba(212,168,67,.1);position:relative;overflow:hidden}
+.power-wrap::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(212,168,67,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(212,168,67,.025) 1px,transparent 1px);background-size:56px 56px}
+.power-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:550px;height:280px;background:radial-gradient(ellipse,rgba(212,168,67,.07) 0%,transparent 70%);pointer-events:none}
+.power-c{position:relative;z-index:1}
+.power-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(212,168,67,.08);border:1px solid rgba(212,168,67,.2);border-radius:50px;padding:7px 18px;font-family:var(--fh);font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gd);margin-bottom:26px}
+.power-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gd)}
+.power-h{font-family:var(--fh);font-size:clamp(2.2rem,4.5vw,3.8rem);font-weight:900;letter-spacing:-1.5px;line-height:1.05;color:var(--pu);margin-bottom:16px}
+.power-h em{font-style:normal;color:var(--gd)}
+.power-sub{font-size:.975rem;color:rgba(255,255,255,.42);margin-bottom:40px;font-weight:300;line-height:1.8;max-width:420px;margin-left:auto;margin-right:auto}
+.power-btns{display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+
+/* ══ FOOTER ══ */
+footer{background:#04080f;padding:60px 0 0}
+.foot-g{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:52px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:24px}
+.f-logo{height:48px;width:auto;display:block;object-fit:contain;margin-bottom:16px}
+.f-brand p{font-size:.84rem;color:rgba(255,255,255,.28);line-height:1.78;max-width:262px;font-weight:300;margin-bottom:18px}
+.f-areas{display:flex;flex-wrap:wrap;gap:6px}
+.f-area{font-family:var(--fh);font-size:.72rem;font-weight:600;color:rgba(255,255,255,.3);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:4px;padding:4px 10px}
+.f-socs{display:flex;gap:8px;margin-top:18px}
+.f-soc{width:33px;height:33px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;text-decoration:none;color:rgba(255,255,255,.32);transition:all .2s}
+.f-soc:hover{background:rgba(212,168,67,.12);border-color:rgba(212,168,67,.3);color:var(--gd)}
+.f-soc svg{width:14px;height:14px}
+.f-col h5{font-family:var(--fh);font-size:.72rem;font-weight:700;color:var(--pu);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.f-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.f-links a{font-size:.84rem;color:rgba(255,255,255,.32);text-decoration:none;transition:color .2s}
+.f-links a:hover{color:var(--gd)}
+.f-row{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start}
+.f-row svg{width:14px;height:14px;color:var(--gd);flex-shrink:0;margin-top:2px;opacity:.65}
+.f-row span,.f-row a{font-size:.83rem;color:rgba(255,255,255,.32);line-height:1.55;font-weight:300;text-decoration:none;transition:color .2s}
+.f-row a:hover{color:var(--gd)}
+.foot-bot{display:flex;align-items:center;justify-content:space-between;padding-bottom:28px;flex-wrap:wrap;gap:10px}
+.f-copy{font-size:.76rem;color:rgba(255,255,255,.18)}
+.f-leg{display:flex;gap:18px}
+.f-leg a{font-size:.76rem;color:rgba(255,255,255,.18);text-decoration:none;transition:color .2s}
+.f-leg a:hover{color:rgba(255,255,255,.45)}
+
+/* ══ MOBILE STICKY BAR ══ */
+.mob-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;background:rgba(8,13,24,.97);backdrop-filter:blur(16px);border-top:1px solid rgba(255,255,255,.1);padding:10px 14px;gap:8px}
+.mb{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:11px 8px;border-radius:8px;font-family:var(--fh);font-weight:700;font-size:.8rem;text-decoration:none;border:none;cursor:pointer;transition:all .2s}
+.mb svg{width:15px;height:15px}
+.mb-call{background:rgba(255,255,255,.08);color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.12)!important}
+.mb-wa{background:#25d366;color:#fff}
+.mb-quote{background:var(--gd);color:var(--dk)}
+
+/* ══ RESPONSIVE ══ */
+@media(max-width:1100px){
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .svc-card.dark{grid-column:span 2}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .why-card.wide{grid-column:span 2}
+  .foot-g{grid-template-columns:1fr 1fr;gap:36px}
+  .testi-g{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  nav .nav-links{display:none}
+  .nav-phone{display:none}
+  .h-img{display:none}
+  .hero-inner{padding:44px 5%}
+  h1.hh{font-size:2.3rem;letter-spacing:-1px}
+  .hero-floats{display:none}
+  .h-bullets{grid-template-columns:1fr}
+  .tb-inner{flex-direction:column}
+  .tb-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.06);width:100%;padding:15px 0}
+  .tb-item:last-child{border-bottom:none}
+  .prob-g{grid-template-columns:1fr;gap:36px}
+  .svc-hdr{grid-template-columns:1fr;gap:16px}
+  .svc-grid{grid-template-columns:1fr}
+  .svc-card.dark{grid-column:1}
+  .why-grid{grid-template-columns:1fr}
+  .why-card.wide{grid-column:1;flex-direction:column}
+  .why-hdr{flex-direction:column}
+  .why-note{text-align:left;max-width:none}
+  .offer-inner{flex-direction:column;gap:24px}
+  .form-g{grid-template-columns:1fr;gap:36px}
+  .foot-g{grid-template-columns:1fr;gap:30px}
+  .power-wrap{margin:0 14px 60px;padding:60px 6%}
+  .mob-bar{display:flex}
+  .sticky-float{display:none}
+  body{padding-bottom:68px}
+  .sec{padding:68px 0}
+  .testi-g{grid-template-columns:1fr}
+}
+/* ══ STICKY FLOAT BUTTONS ══ */
+.sticky-float{position:fixed;bottom:32px;right:24px;z-index:998;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.sf-btn{display:flex;align-items:center;gap:10px;height:48px;padding:0 18px 0 12px;border-radius:50px;text-decoration:none;font-family:var(--fh);font-weight:700;font-size:.82rem;white-space:nowrap;color:#fff;cursor:pointer;overflow:hidden;max-width:48px;box-shadow:0 4px 20px rgba(0,0,0,.25);transition:max-width .32s cubic-bezier(.4,0,.2,1),box-shadow .25s,background .25s,border-color .25s}
+.sf-btn:hover{max-width:220px}
+.sf-icon{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sf-icon svg{width:15px;height:15px;flex-shrink:0}
+.sf-label{opacity:0;white-space:nowrap;transition:opacity .12s .12s;pointer-events:none}
+.sf-btn:hover .sf-label{opacity:1}
+.sf-wa{background:rgba(14,24,42,.92);backdrop-filter:blur(14px);border:1.5px solid rgba(37,211,102,.2)}
+.sf-wa .sf-icon{background:#25d366}
+.sf-wa:hover{background:#25d366;border-color:#25d366;box-shadow:0 6px 28px rgba(37,211,102,.45)}
+.sf-call{background:rgba(14,24,42,.92);backdrop-filter:blur(14px);border:1.5px solid rgba(212,168,67,.2)}
+.sf-call .sf-icon{background:var(--gd)}
+.sf-call:hover{background:var(--gd);border-color:var(--gd);box-shadow:0 6px 28px rgba(212,168,67,.45);color:var(--dk)}
+.sf-email{background:rgba(14,24,42,.92);backdrop-filter:blur(14px);border:1.5px solid rgba(27,120,220,.2)}
+.sf-email .sf-icon{background:var(--blv)}
+.sf-email:hover{background:var(--blv);border-color:var(--blv);box-shadow:0 6px 28px rgba(27,120,220,.45)}
+/* ══ PROJECTS ══ */
+.proj-sec{background:var(--ic)}
+.proj-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-rows:auto;
+  gap:14px;
+}
+.proj-item{
+  position:relative;overflow:hidden;border-radius:16px;
+  display:block;cursor:pointer;
+  aspect-ratio:4/3;
+  border:1px solid var(--cl);
+  box-shadow:0 2px 8px rgba(11,15,26,.07);
+}
+.proj-item.proj-wide{grid-column:span 2}
+.proj-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.proj-item:hover img{transform:scale(1.06)}
+.proj-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top, rgba(8,13,24,.85) 0%, rgba(8,13,24,.2) 50%, transparent 100%);
+  opacity:0;transition:opacity .3s;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+}
+.proj-item:hover .proj-overlay{opacity:1}
+.proj-zoom{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--gd);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 18px rgba(212,168,67,.5);
+  transform:scale(.8);transition:transform .3s;
+}
+.proj-item:hover .proj-zoom{transform:scale(1)}
+.proj-zoom svg{width:20px;height:20px;color:var(--dk)}
+.proj-overlay span{
+  font-family:var(--fh);font-size:.78rem;font-weight:700;
+  color:rgba(255,255,255,.9);letter-spacing:.3px;
+  text-align:center;padding:0 16px;
+}
+@media(max-width:768px){
+  .proj-grid{grid-template-columns:repeat(2,1fr)}
+  .proj-item.proj-wide{grid-column:span 2}
+  .proj-overlay{opacity:1}
+}
+@media(max-width:480px){
+  .proj-grid{grid-template-columns:1fr}
+  .proj-item.proj-wide{grid-column:1}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <a href="#" class="logo"><img src="data:image/png;base64,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" alt="Roohin Supplies"></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#industries">Industries</a></li>
+    <li><a href="#why-us">Why Us</a></li>
+    <li><a href="#form">Get Quote</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:+971000000000" class="nav-phone">+971 00 000 0000</a>
+    <a href="#form" class="btn-gold">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      Free Site Visit
+    </a>
+    <a href="https://wa.me/971000000000" class="nav-wa" target="_blank" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51C7.37 9.25 7.174 9.25 6.976 9.25c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413A11.815 11.815 0 0 0 12.05 0z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="h-grid"></div>
+    <div class="h-glow"></div>
+    <div class="h-img">
+      <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=90&fit=crop" alt="Cold Room UAE">
+    </div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="h-eyebrow"><div class="h-dash"></div><span class="h-lbl">UAE Cold Room Specialists</span></div>
+      <h1 class="hh">Cold Room<br><span class="gd">Installation</span> in UAE<br><span class="ol">Custom Solutions</span></h1>
+      <p class="h-sub">We offer end-to-end cold room installation in UAE, providing customized solutions for all types of businesses. From Walk-In Chillers and Freezers to Industrial Cold Rooms and Cold Storage Warehouses for the hospitality industry. Every project is tailored to your space, product type, and operational requirements.</p>
+      <div class="h-bullets">
+        <div class="hb"><div class="hb-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span>Free Site Visit &amp; Consultation</span></div>
+        <div class="hb"><div class="hb-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span>Customised Design for Your Space</span></div>
+        <div class="hb"><div class="hb-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span>Fast Installation &amp; Expert Support</span></div>
+        <div class="hb"><div class="hb-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span>Energy-Efficient &amp; UAE Compliant</span></div>
+        <div class="hb"><div class="hb-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span>After Sales Support</span></div>
+      </div>
+      <div class="h-ctas">
+        <a href="#form" class="btn-gold h-cta-main">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Request Free Site Visit &amp; Consultation
+        </a>
+      </div>
+      <div class="h-micro">
+        <a href="tel:+971000000000" class="mc"><div class="mc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.48 2 2 0 0 1 3.55 1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.88-.88a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>📞 Call Now</a>
+        <div class="mc-sep"></div>
+        <a href="https://wa.me/971000000000" class="mc" target="_blank"><div class="mc-ic"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51C7.37 9.25 7.174 9.25 6.976 9.25c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413A11.815 11.815 0 0 0 12.05 0z"/></svg></div>💬 WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-floats">
+    <div class="fc"><div class="fc-l">System Status</div><div class="fc-live"><div class="ld"></div>Operating — −18°C</div></div>
+    <div class="fc"><div class="fc-l">Projects Delivered</div><div class="fc-v">100<em>+</em></div><div class="fc-s">Across UAE</div></div>
+    <div class="fc"><div class="fc-l">Experience</div><div class="fc-v">10<em>+ Yrs</em></div><div class="fc-s">Hospitality Industry</div></div>
+  </div>
+</section>
+
+<!-- ═══ TRUST BAR ═══ -->
+<div class="trust-bar">
+  <div class="tb-inner">
+    <div class="tb-item"><div class="tb-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><polyline points="20 6 9 17 4 12"/></svg></div><span>10+ Years Experience in Hospitality Industry</span></div>
+    <div class="tb-item"><div class="tb-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><polyline points="20 6 9 17 4 12"/></svg></div><span>100+ Successful Projects &amp; Installations</span></div>
+    <div class="tb-item"><div class="tb-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><polyline points="20 6 9 17 4 12"/></svg></div><span>Safe, Compliant &amp; Energy-Efficient Systems</span></div>
+    <div class="tb-item"><div class="tb-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><polyline points="20 6 9 17 4 12"/></svg></div><span>Trusted by Businesses Across UAE</span></div>
+  </div>
+</div>
+
+<!-- ═══ PROBLEM / SOLUTION ═══ -->
+<section class="prob-sec sec" id="about">
+  <div class="wrap">
+    <div class="prob-g">
+      <div class="prob-img">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85&fit=crop" alt="Cold Storage UAE">
+        <div class="img-badge"><div class="ib-n">100+</div><div class="ib-t">Projects Installed</div></div>
+      </div>
+      <div>
+        <div class="eyebrow"><div class="ey-d"></div><span class="ey-t">Problem → Solution</span></div>
+        <h2 class="sh2">Reliable Cold Storage Solutions That <em>Protect Your Business Investment</em></h2>
+        <p class="prob-body">Temperature fluctuations can cost your business thousands in spoiled inventory and compliance penalties. Our expertly designed cold rooms provide consistent cooling, energy savings, and dependable performance, ensuring your products remain safe and your operations run without interruption — even in the harsh UAE climate.</p>
+        <div class="prob-tags">
+          <span class="ptag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Energy Efficient</span>
+          <span class="ptag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>UAE Compliant</span>
+          <span class="ptag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Fast Installation</span>
+          <span class="ptag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>After-Sales Support</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section class="svc-sec sec" id="services">
+  <div class="wrap">
+    <div class="svc-hdr">
+      <div>
+        <div class="eyebrow"><div class="ey-d"></div><span class="ey-t">What We Install</span></div>
+        <h2 class="sh2 gold">Our Cold Rooms &amp; <em>Refrigeration Solutions</em></h2>
+      </div>
+      <div class="svc-hdr-r"><p>Every cold room solution is engineered to your exact specifications — designed for the UAE climate, compliant with local standards, and built for lasting performance.</p></div>
+    </div>
+    <div class="svc-grid">
+
+      <div class="svc-card dark">
+        <span class="svc-n">01</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3 class="svc-h">Walk-In Chiller Room</h3>
+        <p class="svc-p">Maintain consistent chilled temperatures to preserve freshness, quality, and food safety. Our walk-in chiller rooms are custom-designed to match your space, storage volume, and operational workflow. Built with high-grade insulation and energy-efficient systems, they ensure reliable performance even in demanding UAE conditions. Ideal for restaurants, hotels, supermarkets, and commercial kitchens.</p>
+        <div class="svc-cks">
+          <div class="svc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="svc-ct">Custom-designed for your space &amp; storage volume</span></div>
+          <div class="svc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="svc-ct">High-grade insulation &amp; energy-efficient systems</span></div>
+          <div class="svc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="svc-ct">Ideal for restaurants, hotels &amp; supermarkets</span></div>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <span class="svc-n">02</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg></div>
+        <h3 class="svc-h">Walk-In Freezer Room</h3>
+        <p class="svc-p">Engineered for stable sub-zero temperatures, our freezer rooms protect frozen goods without temperature fluctuations. We design each unit based on your product type, usage frequency, and capacity needs. Durable panels, airtight sealing, and efficient refrigeration deliver long-term reliability and reduced energy costs. Perfect for meat, seafood, frozen food storage, and distribution operations.</p>
+        <div class="svc-cks">
+          <div class="svc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="svc-ct">Stable sub-zero temperature control</span></div>
+          <div class="svc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="svc-ct">Airtight sealing &amp; durable panels</span></div>
+          <div class="svc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="svc-ct">Reduced energy costs long-term</span></div>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <span class="svc-n">03</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <h3 class="svc-h">Blast Freezer &amp; Blast Chiller</h3>
+        <p class="svc-p">Rapid cooling technology designed to quickly reduce product temperature while preserving taste, texture, and safety. Our blast systems help extend shelf life, improve hygiene compliance, and support high-volume kitchen or production environments. Configured to your workflow and output requirements, they ensure fast, uniform cooling cycles. Essential for bakeries, hotels, catering facilities, and food production units.</p>
+        <div class="svc-cks">
+          <div class="svc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="svc-ct">Extends shelf life &amp; hygiene compliance</span></div>
+          <div class="svc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="svc-ct">Fast, uniform cooling cycles</span></div>
+          <div class="svc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="svc-ct">Configured to your workflow &amp; output</span></div>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <span class="svc-n">04</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3 class="svc-h">Cold Storage Warehouse</h3>
+        <p class="svc-p">Large-scale cold storage solutions built for bulk inventory management and logistics efficiency. We customize layout, racking integration, and temperature zones to optimize storage capacity and operational flow. Designed for continuous performance, energy efficiency, and precise climate control. Suitable for food distributors, supermarkets, and industrial storage facilities.</p>
+        <div class="svc-cks">
+          <div class="svc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="svc-ct">Custom layout &amp; racking integration</span></div>
+          <div class="svc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="svc-ct">Multi-temperature zone capability</span></div>
+          <div class="svc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="svc-ct">Precise climate &amp; energy efficiency</span></div>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <span class="svc-n">05</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h.01M7 20v-4M12 20v-8M17 20V8M22 4v16"/></svg></div>
+        <h3 class="svc-h">Industrial Cold Rooms</h3>
+        <p class="svc-p">Heavy-duty cold rooms designed for manufacturing, processing, pharmaceutical, and industrial-grade applications. Fully customizable in size, temperature ranges, and multi-zone configurations. Constructed for durability, thermal efficiency, and uninterrupted operation. Built to handle high-demand environments with strict compliance requirements.</p>
+        <div class="svc-cks">
+          <div class="svc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="svc-ct">Multi-zone configurations available</span></div>
+          <div class="svc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="svc-ct">Strict compliance requirements met</span></div>
+          <div class="svc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="svc-ct">High durability &amp; thermal efficiency</span></div>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <span class="svc-n">06</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 7h6M9 12h6M9 17h4"/></svg></div>
+        <h3 class="svc-h">Commercial Refrigeration Equipment</h3>
+        <p class="svc-p">Comprehensive refrigeration solutions including upright chillers, under-counter units, display cabinets, prep counters, and ice machines. Selected and configured based on your kitchen layout, business type, and workflow efficiency. Our equipment combines durability, energy efficiency, and easy maintenance. Designed to enhance food safety, speed, and operational performance.</p>
+        <div class="svc-cks">
+          <div class="svc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="svc-ct">Upright chillers, display cabinets &amp; ice machines</span></div>
+          <div class="svc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="svc-ct">Configured to your kitchen layout</span></div>
+          <div class="svc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="svc-ct">Energy efficient &amp; easy maintenance</span></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="svc-cta">
+      <a href="#form" class="btn-gold" style="font-size:.95rem;padding:14px 30px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        🟡 Get a Free Site Assessment
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY US ═══ -->
+<section class="why-sec sec" id="why-us">
+  <div class="wrap">
+    <div class="why-hdr">
+      <div>
+        <div class="eyebrow"><div class="ey-d"></div><span class="ey-t">Why Choose Us</span></div>
+        <h2 class="sh2 light gold">Why Businesses Across UAE Choose <em>Roohin Supplies</em></h2>
+      </div>
+      <p class="why-note">Handled personally by our expert engineering team — from consultation to after-sales support.</p>
+    </div>
+    <div class="why-roohin-grid">
+
+      <!-- Free Site Visit -->
+      <div class="why-roohin-card">
+        <div class="why-roohin-icon-wrap" style="background:rgba(212,168,67,0.1);border:1px solid rgba(212,168,67,0.25);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div class="why-roohin-card-title">Free Site Visit Available Across All Emirates</div>
+        <div class="why-roohin-check-tag">
+          <div class="why-roohin-check-dot"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          Included
+        </div>
+      </div>
+
+      <!-- Pricing -->
+      <div class="why-roohin-card">
+        <div class="why-roohin-icon-wrap" style="background:rgba(212,168,67,0.1);border:1px solid rgba(212,168,67,0.25);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+        </div>
+        <div class="why-roohin-card-title">Competitive &amp; Transparent Pricing — No Hidden Costs</div>
+        <div class="why-roohin-check-tag">
+          <div class="why-roohin-check-dot"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          Guaranteed
+        </div>
+      </div>
+
+      <!-- Custom-Built -->
+      <div class="why-roohin-card">
+        <div class="why-roohin-icon-wrap" style="background:rgba(212,168,67,0.1);border:1px solid rgba(212,168,67,0.25);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div class="why-roohin-card-title">Custom-Built Cold Rooms for Your Exact Requirements</div>
+        <div class="why-roohin-check-tag">
+          <div class="why-roohin-check-dot"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          100% Custom
+        </div>
+      </div>
+
+      <!-- Fast Completion -->
+      <div class="why-roohin-card">
+        <div class="why-roohin-icon-wrap" style="background:rgba(212,168,67,0.1);border:1px solid rgba(212,168,67,0.25);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="why-roohin-card-title">Fast Project Completion with Minimal Business Disruption</div>
+        <div class="why-roohin-check-tag">
+          <div class="why-roohin-check-dot"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          On Schedule
+        </div>
+      </div>
+
+      <!-- Energy Efficient -->
+      <div class="why-roohin-card">
+        <div class="why-roohin-icon-wrap" style="background:rgba(212,168,67,0.1);border:1px solid rgba(212,168,67,0.25);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c1.25-1.25 2.5-2.5 3.5-3.5"/><path d="M12 13c0 0-2-3-2-6a8 8 0 0 1 14-5.2c0 0-10.8 1.2-12 11.2z"/><path d="M20 9c0 0-3.5 3-6 3s-6-3-6-3"/></svg>
+        </div>
+        <div class="why-roohin-card-title">Energy-Efficient Systems That Reduce Electricity Expenses</div>
+        <div class="why-roohin-check-tag">
+          <div class="why-roohin-check-dot"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          Eco Friendly
+        </div>
+      </div>
+
+      <!-- UAE Compliant -->
+      <div class="why-roohin-card">
+        <div class="why-roohin-icon-wrap" style="background:rgba(212,168,67,0.1);border:1px solid rgba(212,168,67,0.25);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        </div>
+        <div class="why-roohin-card-title">Fully Compliant with UAE Regulations &amp; Standards</div>
+        <div class="why-roohin-check-tag">
+          <div class="why-roohin-check-dot"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          UAE Compliance
+        </div>
+      </div>
+
+      <!-- After-Sales Wide -->
+      <div class="why-roohin-card why-roohin-card-wide">
+        <div class="why-roohin-icon-wrap" style="background:rgba(212,168,67,0.1);border:1px solid rgba(212,168,67,0.25);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+        </div>
+        <div class="why-roohin-card-title">Reliable After-Sales Support &amp; Warranty on Installation &amp; Units</div>
+        <div class="why-roohin-check-tag">
+          <div class="why-roohin-check-dot"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          Full Warranty
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INDUSTRIES ═══ -->
+<section class="ind-sec sec" id="industries">
+  <div class="wrap">
+    <div style="text-align:center;max-width:600px;margin:0 auto 52px">
+      <div class="eyebrow" style="justify-content:center"><div class="ey-d"></div><span class="ey-t">Industries We Serve</span></div>
+      <h2 class="sh2" style="text-align:center">Cold Storage Solutions Across <em style="color:var(--gd);font-style:normal">Every Sector</em></h2>
+      <p style="font-size:.975rem;color:var(--sl);line-height:1.8;font-weight:300;margin-top:12px">From hospitality to pharmaceuticals, we deliver precise cold chain solutions tailored to the demands of your industry.</p>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-card">
+        <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <span>Restaurants &amp; Hotels</span>
+      </div>
+      <div class="ind-card">
+        <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+        <span>Supermarkets</span>
+      </div>
+      <div class="ind-card">
+        <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></div>
+        <span>Food Processing</span>
+      </div>
+      <div class="ind-card">
+        <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <span>Logistics &amp; Warehousing</span>
+      </div>
+      <div class="ind-card">
+        <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11m0 0H5l-2 7h18l-2-7h-4m-6 0h6"/></svg></div>
+        <span>Pharmaceuticals</span>
+      </div>
+      <div class="ind-card">
+        <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
+        <span>Catering Companies</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FREE OFFER ═══ -->
+<section class="offer-sec sec-sm">
+  <div class="wrap">
+    <div class="offer-inner">
+      <div class="offer-left">
+        <div class="offer-row">
+          <div class="offer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
+          <h3 class="offer-h">🎁 Free Site Visit &amp; Consultation Available Across UAE</h3>
+        </div>
+        <p class="offer-p">Not sure what size or system you need? Our experts will visit your location, assess your space, and recommend the most efficient solution — at no cost.</p>
+      </div>
+      <div>
+        <a href="#form" class="btn-gold" style="font-size:1rem;padding:15px 34px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          🟡 Book Free Site Visit
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LEAD FORM ═══ -->
+<section class="form-sec sec" id="form">
+  <div class="wrap">
+    <div class="form-g">
+      <div>
+        <div class="eyebrow"><div class="ey-d"></div><span class="ey-t">Get in Touch</span></div>
+        <h2 class="sh2 gold">Request a <em>Free Consultation</em></h2>
+        <p class="form-body">Fill in your details and one of our cold room specialists will contact you within 24 hours to discuss your requirements and arrange a free site visit across UAE.</p>
+        <div class="form-feats">
+          <div class="ff"><div class="ff-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span>Free site visit across all UAE Emirates</span></div>
+          <div class="ff"><div class="ff-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span>No obligation — completely free consultation</span></div>
+          <div class="ff"><div class="ff-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span>Customised quote based on your exact needs</span></div>
+          <div class="ff"><div class="ff-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span>Response within 24 hours</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="form-box">
+          <div class="form-title">Get Free Quote</div>
+          <div class="form-hint">Our team will contact you within 24 hours.</div>
+          <div class="form-fields">
+            <div class="fg"><label>Name</label><input type="text" placeholder="Your full name"></div>
+            <div class="fg"><label>Company Name</label><input type="text" placeholder="Your company or business name"></div>
+            <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+971 00 000 0000"></div>
+            <div class="fg">
+              <label>Requirement</label>
+              <select>
+                <option value="" disabled selected>Select your requirement</option>
+                <option>Walk-In Chiller Room</option>
+                <option>Walk-In Freezer Room</option>
+                <option>Blast Freezer &amp; Blast Chiller</option>
+                <option>Cold Storage Warehouse</option>
+                <option>Industrial Cold Room</option>
+                <option>Commercial Refrigeration Equipment</option>
+                <option>Other / Not Sure</option>
+              </select>
+            </div>
+            <div class="fg"><label>Location</label><input type="text" placeholder="Your location in UAE"></div>
+            <button class="form-btn" id="formBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              🟡 Get Free Quote
+            </button>
+          </div>
+          <p class="form-priv">🔒 We respect your privacy. No spam.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHATSAPP ═══ -->
+<div class="wa-sec">
+  <div class="wa-inner">
+    <div class="wa-ring"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51C7.37 9.25 7.174 9.25 6.976 9.25c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413A11.815 11.815 0 0 0 12.05 0z"/></svg></div>
+    <h2 class="wa-h">Prefer Instant Assistance?</h2>
+    <p class="wa-sub">💬 Chat with our cold room specialists on WhatsApp. Get quick answers, share your space details, and receive a fast response from our team.</p>
+    <a href="https://wa.me/971000000000" class="btn-wa" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51C7.37 9.25 7.174 9.25 6.976 9.25c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413A11.815 11.815 0 0 0 12.05 0z"/></svg>
+      🟢 Start WhatsApp Chat
+    </a>
+  </div>
+</div>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="testi-sec sec" id="testimonials">
+  <div class="wrap">
+    <div class="eyebrow" style="margin-bottom:13px"><div class="ey-d"></div><span class="ey-t">Client Reviews</span></div>
+    <h2 class="sh2" style="margin-bottom:44px">What Our <em style="color:var(--gd);font-style:normal">Clients Say</em></h2>
+    <div class="testi-g">
+      <div class="testi-card">
+        <div class="t-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="t-q">"Professional installation, delivered exactly as promised."</p>
+        <div class="t-foot"><div class="t-av">RS</div><div><div class="t-name">Restaurant Owner</div><div class="t-role">Dubai, UAE</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="t-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="t-q">"Excellent pricing and fast execution."</p>
+        <div class="t-foot"><div class="t-av">HM</div><div><div class="t-name">Hotel Manager</div><div class="t-role">Abu Dhabi, UAE</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROJECTS ═══ -->
+<section class="proj-sec sec" id="projects">
+  <div class="wrap">
+    <div style="text-align:center;max-width:560px;margin:0 auto 52px">
+      <div class="eyebrow" style="justify-content:center"><div class="ey-d"></div><span class="ey-t">Portfolio</span></div>
+      <h2 class="sh2" style="text-align:center">Our <em style="color:var(--gd);font-style:normal">Projects</em></h2>
+      <p style="font-size:.95rem;color:var(--sl);line-height:1.8;font-weight:300;margin-top:10px">A selection of cold room installations completed across UAE — from restaurants and hotels to industrial warehouses.</p>
+    </div>
+    <div class="proj-grid">
+      <a href="project-1.jpg" data-fancybox="projects" data-caption="Walk-In Chiller Room — Dubai Restaurant" class="proj-item">
+        <img src="project-1.jpg" alt="Walk-In Chiller Room Dubai">
+        <div class="proj-overlay"><div class="proj-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div><span>Walk-In Chiller Room</span></div>
+      </a>
+      <a href="project-2.jpg" data-fancybox="projects" data-caption="Walk-In Freezer Room — Abu Dhabi Hotel" class="proj-item">
+        <img src="project-2.jpg" alt="Walk-In Freezer Room Abu Dhabi">
+        <div class="proj-overlay"><div class="proj-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div><span>Walk-In Freezer Room</span></div>
+      </a>
+      <a href="project-3.jpg" data-fancybox="projects" data-caption="Blast Freezer Installation — Sharjah" class="proj-item">
+        <img src="project-3.jpg" alt="Blast Freezer Sharjah">
+        <div class="proj-overlay"><div class="proj-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div><span>Blast Freezer</span></div>
+      </a>
+      <a href="project-4.jpg" data-fancybox="projects" data-caption="Cold Storage Warehouse — Dubai" class="proj-item proj-wide">
+        <img src="project-4.jpg" alt="Cold Storage Warehouse Dubai">
+        <div class="proj-overlay"><div class="proj-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div><span>Cold Storage Warehouse</span></div>
+      </a>
+      <a href="project-5.jpg" data-fancybox="projects" data-caption="Industrial Cold Room — Ras Al Khaimah" class="proj-item">
+        <img src="project-5.jpg" alt="Industrial Cold Room RAK">
+        <div class="proj-overlay"><div class="proj-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div><span>Industrial Cold Room</span></div>
+      </a>
+      <a href="project-6.jpg" data-fancybox="projects" data-caption="Commercial Refrigeration — Dubai Supermarket" class="proj-item">
+        <img src="project-6.jpg" alt="Commercial Refrigeration Dubai">
+        <div class="proj-overlay"><div class="proj-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div><span>Commercial Refrigeration</span></div>
+      </a>
+      <a href="project-7.jpg" data-fancybox="projects" data-caption="Chiller Room — Abu Dhabi Catering" class="proj-item">
+        <img src="project-7.jpg" alt="Chiller Room Catering">
+        <div class="proj-overlay"><div class="proj-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div><span>Chiller Room — Catering</span></div>
+      </a>
+      <a href="project-8.jpg" data-fancybox="projects" data-caption="Freezer Room — Sharjah Food Processing" class="proj-item">
+        <img src="project-8.jpg" alt="Freezer Room Food Processing">
+        <div class="proj-overlay"><div class="proj-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div><span>Freezer Room — Food Processing</span></div>
+      </a>
+      <a href="project-9.jpg" data-fancybox="projects" data-caption="Cold Room Installation — Dubai Hotel Kitchen" class="proj-item">
+        <img src="project-9.jpg" alt="Hotel Kitchen Cold Room">
+        <div class="proj-overlay"><div class="proj-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div><span>Hotel Kitchen Cold Room</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ POWER CTA ═══ -->
+<div class="power-sec">
+  <div class="power-wrap">
+    <div class="power-glow"></div>
+    <div class="power-c">
+      <div class="power-badge">Free Site Visit — No Obligation</div>
+      <h2 class="power-h">Need Reliable Cold Room<br>Installation in <em>UAE</em>?</h2>
+      <p class="power-sub">Our experts will visit your location, assess your space, and deliver a fully customised solution — across all UAE Emirates.</p>
+      <div class="power-btns">
+        <a href="#form" class="btn-gold" style="font-size:1rem;padding:15px 32px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Get Free Consultation
+        </a>
+        <a href="https://wa.me/971000000000" class="btn-wa" style="font-size:1rem;padding:15px 32px;" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51C7.37 9.25 7.174 9.25 6.976 9.25c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413A11.815 11.815 0 0 0 12.05 0z"/></svg>
+          WhatsApp Now
+        </a>
+        <a href="tel:+971000000000" class="btn-ghost" style="font-size:.95rem;padding:15px 26px;">📞 Call Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-g">
+      <div class="f-brand">
+        <img src="data:image/png;base64,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" alt="Roohin Supplies" class="f-logo">
+        <p>UAE's trusted cold room installation and commercial refrigeration specialists. Hotel | Restaurant | Cafe — serving all businesses across UAE Emirates.</p>
+        <div class="f-areas">
+          <span class="f-area">Dubai</span><span class="f-area">Abu Dhabi</span><span class="f-area">Sharjah</span><span class="f-area">Ras Al Khaimah</span><span class="f-area">Across UAE</span>
+        </div>
+        <div class="f-socs">
+          <a href="#" class="f-soc" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" class="f-soc" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://wa.me/971000000000" class="f-soc" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51C7.37 9.25 7.174 9.25 6.976 9.25c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413A11.815 11.815 0 0 0 12.05 0z"/></svg></a>
+        </div>
+      </div>
+      <div class="f-col">
+        <h5>Quick Links</h5>
+        <ul class="f-links">
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#why-us">Why Choose Us</a></li>
+          <li><a href="#form">Get Free Quote</a></li>
+          <li><a href="#testimonials">Client Reviews</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h5>Services</h5>
+        <ul class="f-links">
+          <li><a href="#services">Walk-In Chiller Rooms</a></li>
+          <li><a href="#services">Walk-In Freezer Rooms</a></li>
+          <li><a href="#services">Blast Freezers</a></li>
+          <li><a href="#services">Cold Storage Warehouses</a></li>
+          <li><a href="#services">Industrial Cold Rooms</a></li>
+          <li><a href="#services">Commercial Refrigeration</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h5>Contact Us</h5>
+        <div class="f-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.48 2 2 0 0 1 3.55 1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.88-.88a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+971000000000">Phone | WhatsApp</a></div>
+        <div class="f-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="/cdn-cgi/l/email-protection#3d54535b527d4f52525554534e484d4d5154584e135c58"><span class="__cf_email__" data-cfemail="254c4b434a65574a4a4d4c4b56505555494c40560b4440">[email&#160;protected]</span></a></div>
+        <div class="f-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><span>Dubai | Abu Dhabi | Sharjah | Ras Al Khaimah | Across UAE</span></div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span class="f-copy">© 2025 Roohin Supplies — Hotel | Restaurant | Cafe. All rights reserved.</span>
+      <div class="f-leg"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ STICKY FLOAT BUTTONS ═══ -->
+<div class="sticky-float">
+  <a href="https://wa.me/971000000000" class="sf-btn sf-wa" target="_blank" aria-label="WhatsApp">
+    <div class="sf-icon">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51C7.37 9.25 7.174 9.25 6.976 9.25c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413A11.815 11.815 0 0 0 12.05 0z"/></svg>
+    </div>
+    <span class="sf-label">WhatsApp Us</span>
+  </a>
+  <a href="tel:+971000000000" class="sf-btn sf-call" aria-label="Call Now">
+    <div class="sf-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.48 2 2 0 0 1 3.55 1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.88-.88a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </div>
+    <span class="sf-label">Call Now</span>
+  </a>
+  <a href="/cdn-cgi/l/email-protection#147d7a727b54667b7b7c7d7a67616464787d71673a7571" class="sf-btn sf-email" aria-label="Email Us">
+    <div class="sf-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    </div>
+    <span class="sf-label">Email Us</span>
+  </a>
+</div>
+
+<!-- ═══ STICKY MOBILE BAR ═══ -->
+<div class="mob-bar">
+  <a href="tel:+971000000000" class="mb mb-call">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.48 2 2 0 0 1 3.55 1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.88-.88a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    📞 Call
+  </a>
+  <a href="https://wa.me/971000000000" class="mb mb-wa" target="_blank">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51C7.37 9.25 7.174 9.25 6.976 9.25c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413A11.815 11.815 0 0 0 12.05 0z"/></svg>
+    💬 WhatsApp
+  </a>
+  <a href="#form" class="mb mb-quote">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+    🟡 Get Quote
+  </a>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// Nav scroll effect
+window.addEventListener('scroll', function() {
+  document.querySelector('nav').style.background =
+    window.scrollY > 80 ? 'rgba(4,8,14,.98)' : 'rgba(8,13,24,.96)';
+});
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
+  });
+});
+// Form submit
+document.getElementById('formBtn').addEventListener('click', function(e) {
+  e.preventDefault();
+  this.textContent = '✓ Submitted! We will contact you within 24 hours.';
+  this.style.background = '#15a662';
+  this.style.color = '#fff';
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('[data-fancybox="projects"]').fancybox({
+    buttons: ['zoom','slideShow','fullScreen','close'],
+    loop: true,
+    transitionEffect: 'fade',
+    thumbs: { autoStart: true }
+  });
+});
+</script>
+</body>
+</html>
