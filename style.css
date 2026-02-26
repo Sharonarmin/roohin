@@ -3673,7 +3673,7 @@ footer {
 .project-pagination .swiper-pagination-bullet {
   width: 6px;
   height: 6px;
-  background: rgba(201,169,110,0.3);
+  background: #93c6df4d;
   border-radius: 50%;
   opacity: 1;
   transition: all 0.4s cubic-bezier(0.22,1,0.36,1);
