@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Swiper Reveal Slider</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #f5f0e8;
+      --ink: #1a1710;
+      --gold: #c9a96e;
+    }
+
+    body {
+      background: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'Cormorant Garamond', serif;
+      overflow: hidden;
+    }
+
+.project-slider-wrapper {
+  width: 100%;
+  max-width: 720px;
+  padding: 0 24px;
+}
+
+.project-swiper {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-slide {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+/* Curtain */
+.project-slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  transform-origin: left;
+  transform: scaleX(0);
+  z-index: 10;
+}
+
+.project-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.08);
+  transition: transform 1.2s cubic-bezier(0.22,1,0.36,1);
+}
+
+.swiper-slide-active.project-slide img {
+  transform: scale(1);
+}
+
+.swiper-slide-active.project-slide::after {
+  animation: curtainReveal 1s cubic-bezier(0.77,0,0.18,1) forwards;
+}
+
+/* Pagination */
+.project-pagination {
+  position: relative !important;
+  bottom: auto !important;
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.project-pagination .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  background: rgba(201,169,110,0.3);
+  border-radius: 50%;
+  opacity: 1;
+  transition: all 0.4s cubic-bezier(0.22,1,0.36,1);
+  cursor: pointer;
+}
+
+.project-pagination .swiper-pagination-bullet-active {
+  background: var(--gold);
+  width: 28px;
+  border-radius: 3px;
+}
+  
+  </style>
+</head>
+<body>
+  <div class="project-slider-wrapper">
+
+    <div class="swiper project-swiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide project-slide">
+          <img src="cold-room/1.png" alt="project">
+        </div>
+
+        <div class="swiper-slide project-slide">
+          <img src="cold-room/2.jpeg" alt="project">
+        </div>
+
+        <div class="swiper-slide project-slide">
+          <img src="cold-room/3.png" alt="project">
+        </div>
+
+        <div class="swiper-slide project-slide">
+          <img src="cold-room/4.png" alt="project">
+        </div>
+
+        <div class="swiper-slide project-slide">
+          <img src="cold-room/5.png" alt="project">
+        </div>
+
+      </div>
+    </div>
+
+    <div class="swiper-pagination project-pagination"></div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+const swiper = new Swiper('.project-swiper', {
+  loop: true,
+  speed: 900,
+  effect: 'fade',
+  fadeEffect: { crossFade: false },
+  autoplay: { delay: 4500, disableOnInteraction: false },
+  pagination: {
+    el: '.project-pagination',
+    clickable: true,
+  },
+});
+  </script>
+</body>
+</html>

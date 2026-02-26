@@ -663,13 +663,13 @@ body {
 
 .services-header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 60px;
-    align-items: end;
+    align-items: center;
     margin-bottom: 80px;
 }
 
-.services-header-left {}
+
 
 .services-h2 {
     font-family: var(--f-display);
@@ -685,17 +685,12 @@ body {
     color: var(--frost);
 }
 
-.services-header-right {
-    padding-bottom: 4px;
-}
-
-.services-header-right p {
+.services-header-left p {
     font-size: 1rem;
     color: #5a7080;
     line-height: 1.75;
     font-weight: 300;
-    border-left: 2px solid var(--frost);
-    padding-left: 20px;
+    margin-top: 10px;
 }
 
 /* Featured row — big block */
@@ -3624,93 +3619,119 @@ footer {
 }
 
 /* ══ PROJECTS ══ */
-.proj-sec {
-    padding:50px 0;
+
+.project-swiper {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
 }
 
-.proj-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
+.project-slide {
+  position: relative;
+  overflow: hidden;
 }
 
-.proj-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 16px;
-    display: block;
-    cursor: pointer;
-    aspect-ratio: 4/3;
-    border: 1px solid var(--cl);
-    box-shadow: 0 2px 8px rgba(11, 15, 26, .07);
+/* Curtain */
+.project-slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  transform-origin: left;
+  transform: scaleX(0);
+  z-index: 10;
 }
 
-
-
-.proj-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform .4s ease
+.project-slide img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.08);
+  transition: transform 1.2s cubic-bezier(0.22,1,0.36,1);
 }
 
-.proj-item:hover img {
-    transform: scale(1.06)
+.swiper-slide-active.project-slide img {
+  transform: scale(1);
 }
 
-.proj-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(8, 13, 24, .85) 0%, rgba(8, 13, 24, .2) 50%, transparent 100%);
-    opacity: 0;
-    transition: opacity .3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+.swiper-slide-active.project-slide::after {
+  animation: curtainReveal 1s cubic-bezier(0.77,0,0.18,1) forwards;
 }
 
-.proj-item:hover .proj-overlay {
-    opacity: 1
+/* Pagination */
+.project-pagination {
+  position: relative !important;
+  bottom: auto !important;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
 }
 
-.proj-zoom {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--gd);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 18px rgba(212, 168, 67, .5);
-    transform: scale(.8);
-    transition: transform .3s;
+.project-pagination .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  background: rgba(201,169,110,0.3);
+  border-radius: 50%;
+  opacity: 1;
+  transition: all 0.4s cubic-bezier(0.22,1,0.36,1);
+  cursor: pointer;
 }
 
-.proj-item:hover .proj-zoom {
-    transform: scale(1)
+.project-pagination .swiper-pagination-bullet-active {
+  background: var(--arctic);
+  width: 28px;
+  border-radius: 3px;
 }
 
-
-
+/* mb-2 */
+.mb-2{
+    margin-bottom: 10px;
+}
 
 @media(max-width:768px) {
-    .proj-grid {
-        grid-template-columns: repeat(2, 1fr)
+    .project-swiper {
+        display: flex;
+        justify-content: center;
+        max-width: 500px;
     }
-
-    .proj-overlay {
-        opacity: 1
+    .project-slide img {
+        height: 400px;
     }
-    .sm-d-none{
-        display: none;
+    .services-header{
+        margin-bottom: 50px;
     }
 }
 
-@media(max-width:480px) {
-    .proj-grid {
-        grid-template-columns: 1fr
+@media(max-width: 575px) {
+    .project-swiper {
+        display: flex;
+        justify-content: center;
+        max-width: 380px;
+    }
+    .project-slide img {
+        height: 320px;
+    }
+}
+@media(max-width: 480px) {
+    .project-swiper {
+        display: flex;
+        justify-content: center;
+        max-width: 320px;
+    }
+    .project-slide img {
+        height: 300px;
+    }
+}
+@media(max-width: 375px) {
+    .project-swiper {
+        display: flex;
+        justify-content: center;
+        max-width: 280px;
+    }
+    .project-slide img {
+        height: 260px;
     }
 }
