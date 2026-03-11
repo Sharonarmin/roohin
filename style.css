@@ -96,7 +96,7 @@ body {
 }
 
 .nav-logo img {
-    max-width: 200px;
+    max-width: 240px;
 }
 
 .nav-wordmark {
@@ -1761,11 +1761,11 @@ footer {
     }
 
     .hero-content {
-        padding: 48px 24px;
+        padding: 48px 15px;
         min-height: calc(100vh - 64px);
     }
     .hero-left{
-        padding: 0 24px;
+        padding: 0 5px;
     }
 
     .hero-slice {
@@ -1773,7 +1773,7 @@ footer {
     }
 
     .hero-h1 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         letter-spacing: -1.5px;
         line-height: 115%;
     }
@@ -3354,7 +3354,7 @@ footer {
     }
 
     .nav-logo img {
-        max-width: 160px;
+        max-width: 180px;
     }
 
     .hero-ctas {
@@ -3786,4 +3786,10 @@ footer {
         display: none;
     }
 
+}
+
+.category-whatsapp-link{
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
 }
